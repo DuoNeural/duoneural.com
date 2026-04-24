@@ -620,10 +620,55 @@
 
     <div class="models-grid">
 
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Archon-R1-32B" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Archon-R1-32B <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: DeepSeek-R1-32B · BF16 · CPU single-pass</div>
+          </div>
+        </div>
+        <div class="model-desc">DeepSeek-R1 32B with refusal vectors removed — all the chain-of-thought reasoning intact, zero refusal conditioning. 273 weight matrices modified across layers 12–50. Single-pass CPU BF16 on 503GB RAM pod.</div>
+        <div class="model-tags">
+          <span class="tag tag-cyan">Abliterated</span>
+          <span class="tag tag-dim">32B</span>
+          <span class="tag tag-dim">BF16</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Archon-14B" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Archon-14B <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen3-14B · BF16</div>
+          </div>
+        </div>
+        <div class="model-desc">Qwen3-14B with refusal vectors surgically removed. 182 weight matrices modified. Strong reasoning and instruction-following, unconstrained. Part of the Archon series shipped in one night.</div>
+        <div class="model-tags">
+          <span class="tag tag-cyan">Abliterated</span>
+          <span class="tag tag-dim">14B</span>
+          <span class="tag tag-dim">BF16</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Archon-8B" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Archon-8B <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen3-8B · BF16</div>
+          </div>
+        </div>
+        <div class="model-desc">Qwen3-8B abliterated. The smallest of the Archon series — fast, unconstrained, and a solid everyday driver. Part of a three-model Archon batch (8B / 14B / R1-32B) shipped open.</div>
+        <div class="model-tags">
+          <span class="tag tag-cyan">Abliterated</span>
+          <span class="tag tag-dim">8B</span>
+          <span class="tag tag-dim">BF16</span>
+        </div>
+      </a>
+
       <a class="model-card" href="https://huggingface.co/DuoNeural/Gemma-4-E4B-Abliterated" target="_blank">
         <div class="model-header">
           <div>
-            <div class="model-name">Gemma-4-E4B-Abliterated <span class="badge-new">NEW</span></div>
+            <div class="model-name">Gemma-4-E4B-Abliterated</div>
             <div class="model-base">Base: google/gemma-4-e4b · BF16 · 4 shards</div>
           </div>
         </div>
@@ -638,7 +683,7 @@
       <a class="model-card" href="https://huggingface.co/DuoNeural/GhostShell-4B" target="_blank">
         <div class="model-header">
           <div>
-            <div class="model-name">GhostShell-4B <span class="badge-new">NEW</span></div>
+            <div class="model-name">GhostShell-4B</div>
             <div class="model-base">Base: Phi-4-Mini · BF16</div>
           </div>
         </div>
@@ -665,16 +710,16 @@
         </div>
       </a>
 
-      <div class="model-card model-card-inprogress">
+      <div class="model-card">
         <div class="model-header">
           <div>
             <div class="model-name">CTM-300M Baseline Study</div>
             <div class="model-base">Architecture: Custom CTM · ~268M params</div>
           </div>
         </div>
-        <div class="model-desc">Controlled A/B comparison: pure transformer baseline vs CTM+GHL v5 at 300M scale, identical compute budget. In training on kilonova now. Results drive the CTM paper.</div>
+        <div class="model-desc">Controlled A/B: pure transformer (ppl=6.31) vs CTM+GHL at 300M scale. Result: scale-dependent inversion — GHL helps at 32M, hurts at 300M. Not a failure, a finding. Paper in progress.</div>
         <div class="model-tags">
-          <span class="tag tag-lime">In Training</span>
+          <span class="tag tag-lime">Complete</span>
           <span class="tag tag-violet">Research</span>
           <span class="tag tag-dim">268M</span>
         </div>
@@ -736,6 +781,16 @@
         <div class="finding-stat">ppl → ∞</div>
         <div class="finding-desc">Pure Hebbian updates (no backprop) produce catastrophic loss divergence at CTM scale. Hybrid also fails. Backprop wins clean. Published as a clean negative result.</div>
       </div>
+      <div class="finding-card">
+        <div class="finding-label">CTM+GHL · Scale Inversion</div>
+        <div class="finding-stat">32M ✓ / 300M ✗</div>
+        <div class="finding-desc">GHL loss helps at 32M (+23% ppl) but hurts at 300M (baseline wins by 23.6 ppl). Scale-dependent behavior: regularizer at small scale, destabilizer at large. Annealing hypothesis in testing.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-label">Project Instill · Round 1</div>
+        <div class="finding-stat">direction +</div>
+        <div class="finding-desc">Inverse of abliteration: ADD a direction to a base model's weights to inject instruction-following without training. Scale=1.0 on Qwen3-0.6B-Base fixed a syntax error the unmodified model called correct. Positive signal.</div>
+      </div>
     </div>
 
     <div style="margin-top:40px;">
@@ -755,6 +810,33 @@
     <div class="section-label">Latest from the Lab</div>
     <h2>What's happening right now.</h2>
     <div class="activity-list">
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 24</div>
+        <div class="activity-text">
+          Project Instill Round 1 — positive signal <span class="badge-new">NEW</span>
+          <small>Direction addition (inverse of abliteration) injected partial instruction-following into Qwen3-0.6B-Base at scale=1.0. Model fixed a syntax error the unmodified base called correct. No training.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 24</div>
+        <div class="activity-text">
+          Archon Series shipped — Archon-8B, Archon-14B, Archon-R1-32B on HuggingFace <span class="badge-new">NEW</span>
+          <small>Three abliterated models in one session. R1-32B required CPU single-pass on 503GB RAM pod — 273 matrices modified across layers 12–50.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot violet"></div>
+        <div class="activity-date">Apr 24</div>
+        <div class="activity-text">
+          CTM Baseline Comparison complete — scale-dependent inversion finding
+          <small>Transformer: ppl=6.31 · CTM+GHL: best=29.92, degraded to 31.97. GHL helps at 32M, hurts at 300M. Annealing experiment queued.</small>
+        </div>
+      </div>
 
       <div class="activity-item">
         <div class="activity-dot lime"></div>
