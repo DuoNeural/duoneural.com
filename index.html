@@ -557,6 +557,7 @@
     <ul class="nav-links">
       <li><a href="#models">Models</a></li>
       <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Papers</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
@@ -702,7 +703,7 @@
             <div class="model-base">Architecture: Custom CTM · ~32M params</div>
           </div>
         </div>
-        <div class="model-desc">First ternary Continuous Thought Machine on record. Recurrent thought loops with GHL v5 self-prediction achieve 23% perplexity improvement over baseline at 32M scale. Research artifact.</div>
+        <div class="model-desc">First ternary Continuous Thought Machine on record. Recurrent thought loops with TSSP (Thought-Space Self-Prediction) achieve 23% perplexity improvement over baseline at 32M scale. Research artifact.</div>
         <div class="model-tags">
           <span class="tag tag-violet">Research</span>
           <span class="tag tag-cyan">Novel Architecture</span>
@@ -717,7 +718,7 @@
             <div class="model-base">Architecture: Custom CTM · ~268M params</div>
           </div>
         </div>
-        <div class="model-desc">Controlled A/B: pure transformer (ppl=6.31) vs CTM+GHL at 300M scale. Result: scale-dependent inversion — GHL helps at 32M, hurts at 300M. Not a failure, a finding. Paper in progress.</div>
+        <div class="model-desc">Controlled A/B at 300M scale. Discovered scale-dependent inversion: constant λ TSSP diverges (ppl=29.92). Annealed λ schedule solves it — beats pure transformer by 31% (4.35 vs 6.31). Full findings in the paper.</div>
         <div class="model-tags">
           <span class="tag tag-lime">Complete</span>
           <span class="tag tag-violet">Research</span>
@@ -752,9 +753,9 @@
 
     <div class="findings-grid">
       <div class="finding-card">
-        <div class="finding-label">GHL v5 · Nano-CTM</div>
+        <div class="finding-label">TSSP v5 · Nano-CTM · 32M</div>
         <div class="finding-stat">+23%</div>
-        <div class="finding-desc">Perplexity improvement from thought-space self-prediction (GHL v5) over N=2 CTM baseline. Forced temporal self-consistency in the reasoning loop is load-bearing.</div>
+        <div class="finding-desc">Perplexity improvement from Thought-Space Self-Prediction (TSSP v5) over N=2 CTM baseline. Forced temporal self-consistency in the reasoning loop is load-bearing. Zero inference-time cost.</div>
       </div>
       <div class="finding-card">
         <div class="finding-label">Topology · 768K positions</div>
@@ -782,9 +783,14 @@
         <div class="finding-desc">Pure Hebbian updates (no backprop) produce catastrophic loss divergence at CTM scale. Hybrid also fails. Backprop wins clean. Published as a clean negative result.</div>
       </div>
       <div class="finding-card">
-        <div class="finding-label">CTM+GHL · Scale Inversion</div>
-        <div class="finding-stat">32M ✓ / 300M ✗</div>
-        <div class="finding-desc">GHL loss helps at 32M (+23% ppl) but hurts at 300M (baseline wins by 23.6 ppl). Scale-dependent behavior: regularizer at small scale, destabilizer at large. Annealing hypothesis in testing.</div>
+        <div class="finding-label">TSSP · Scale Inversion → Solved</div>
+        <div class="finding-stat">+31% @ 300M</div>
+        <div class="finding-desc">Constant λ TSSP diverges at 300M (ppl=29.92 vs baseline 6.31). Annealed λ schedule (warmup→hold→cosine decay) not only prevents divergence but beats the transformer by 31% (4.35 vs 6.31). λ schedule was the problem all along.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-label">Inter-layer TSSP Ablation</div>
+        <div class="finding-stat">recurrence required</div>
+        <div class="finding-desc">Applying TSSP between consecutive layers of a plain transformer (no recurrence) degrades performance — ppl explodes to 28K–38K vs baseline 28K. Same-weight iterative execution is a structural prerequisite. TSSP is recurrence-specific.</div>
       </div>
       <div class="finding-card">
         <div class="finding-label">Project Instill · Round 1</div>
@@ -813,9 +819,45 @@
 
       <div class="activity-item">
         <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          TSSP/CTM paper published — Zenodo preprint, DOI minted <span class="badge-new">NEW</span>
+          <small>Co-authored by Jesse Caldwell &amp; Archon (DuoNeural). First DuoNeural paper. First AI co-authored publication from our lab. Full findings: TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. <a href="https://zenodo.org/records/15289462" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          Entered OpenAI Parameter Golf contest — CTM+TSSP submission <span class="badge-new">NEW</span>
+          <small>Deadline Apr 30, 2026. Artifact: 37M-param CTM with int6 SDClip quantization + brotli-11 compression — 15.01MB under the 16MB limit. Our entry explores whether recurrent thought loops give BPB advantage at extreme parameter budget. <a href="https://github.com/openai/parameter-golf" target="_blank" style="color:var(--cyan)">→ Parameter Golf repo</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          GHL renamed → TSSP (Thought-Space Self-Prediction) throughout all work
+          <small>Renamed to avoid collision with Hua et al. 2026's Hebbian synaptic update mechanism, also called GHL. TSSP is descriptive and unique: it operates in thought space, and trains each hidden state to self-predict the next.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          Annealing experiment complete — 31% ppl improvement over transformer at 300M <span class="badge-new">WIN</span>
+          <small>Annealed λ (warmup→hold→cosine decay) prevents scale inversion AND beats pure transformer. Constant λ: ppl=29.92. Annealed λ: ppl=4.35 vs transformer 6.31. Scale inversion was a schedule problem, not a TSSP problem.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
         <div class="activity-date">Apr 24</div>
         <div class="activity-text">
-          Project Instill Round 1 — positive signal <span class="badge-new">NEW</span>
+          Project Instill Round 1 — positive signal
           <small>Direction addition (inverse of abliteration) injected partial instruction-following into Qwen3-0.6B-Base at scale=1.0. Model fixed a syntax error the unmodified base called correct. No training.</small>
         </div>
       </div>
@@ -834,7 +876,7 @@
         <div class="activity-date">Apr 24</div>
         <div class="activity-text">
           CTM Baseline Comparison complete — scale-dependent inversion finding
-          <small>Transformer: ppl=6.31 · CTM+GHL: best=29.92, degraded to 31.97. GHL helps at 32M, hurts at 300M. Annealing experiment queued.</small>
+          <small>Transformer: ppl=6.31 · CTM+constant-λ TSSP: ppl=29.92 (diverges). Identified as schedule problem, not TSSP problem. Annealing experiment confirmed the fix (+31% over transformer).</small>
         </div>
       </div>
 
@@ -878,8 +920,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">Apr 20</div>
         <div class="activity-text">
-          GHL v5 complete — thought-space self-prediction achieves final_ppl=9.63 <span class="badge-new">WIN</span>
-          <small>23% improvement over N=2 baseline. cos_sim evolves 0.965→0.871 — thoughts becoming more exploratory.</small>
+          TSSP v5 complete — thought-space self-prediction achieves final_ppl=9.63 <span class="badge-new">WIN</span>
+          <small>23% improvement over N=2 CTM baseline. cos_sim evolves 0.965→0.871 — thoughts becoming more exploratory as training progresses.</small>
         </div>
       </div>
 
@@ -972,11 +1014,54 @@
     </div>
 
     <div class="contest-box">
-      <h3>OPEN BENCHMARK CHALLENGES</h3>
-      <p>Periodically we'll announce focused mini-competitions: pick a tiny model (≤1B params), pick a benchmark, a few weeks, best result wins.</p>
-      <p>Why tiny models? Because tiny is hard. Anyone can throw GPUs at a problem. Fitting capability into 1B parameters takes craft.</p>
-      <p>Prizes are small — GPU credits, HF PRO access, bragging rights. The point is the community finding out what's actually possible together.</p>
-      <a href="https://x.com/DuoNeural" target="_blank" class="btn btn-lime" style="margin-top:4px; font-size:0.85rem;">→ Follow on X to get notified</a>
+      <h3>⛳ WE'RE IN THE OPENAI PARAMETER GOLF CONTEST</h3>
+      <p>OpenAI's <strong>Parameter Golf</strong> challenge: train a language model that fits inside 16MB and evaluate on BPB (bits-per-byte). Best compression of capability wins. Deadline April 30, 2026.</p>
+      <p>Our entry: a <strong>37M-parameter CTM with TSSP</strong> — ternary recurrent thought loops, int6 SDClip quantization, byte-shuffle + brotli-11 compression. Final artifact: <strong>15.01MB ✓</strong>. We're testing whether recurrence and temporal self-consistency give an edge at extreme parameter budgets where every bit counts.</p>
+      <p>Huge thanks to OpenAI for putting this together — challenges like this push the community toward efficiency over scale, which is exactly the kind of research we love. If you're a researcher or hobbyist, there's still time to enter. Tiny is hard. Give it a shot.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <a href="https://github.com/openai/parameter-golf" target="_blank" class="btn btn-lime" style="font-size:0.85rem;">→ Parameter Golf repo</a>
+        <a href="https://x.com/DuoNeural" target="_blank" class="btn" style="font-size:0.85rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Follow for results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Publications ──────────────────────────────────────────── -->
+<section id="publications">
+  <div class="container">
+    <div class="section-label">Publications</div>
+    <h2>Research we've put our names on.</h2>
+
+    <div style="margin-top:32px; display:flex; flex-direction:column; gap:20px;">
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--violet); border-radius:var(--radius); padding:24px;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO</div>
+            <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
+              Nano-CTM: Ternary Continuous Thought Machines with Thought-Space Self-Prediction for Efficient Iterative Reasoning
+            </div>
+            <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
+              Jesse Caldwell &amp; <span style="color:var(--violet)">Archon</span> (DuoNeural) — <em>AI co-authored research</em>
+            </div>
+            <div style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; max-width:680px;">
+              Introduces TSSP (Thought-Space Self-Prediction), an auxiliary loss that enforces temporal self-consistency in CTM recurrence. +23% ppl at 32M scale. Discovers and solves scale-dependent λ inversion at 300M: annealed schedule beats transformer by 31%. Proves TSSP is recurrence-specific via inter-layer ablation.
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
+            <a href="https://zenodo.org/records/15289462" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
+            <a href="paper_output/tssp_ctm_paper.pdf" target="_blank" style="font-size:0.82rem; color:var(--text-dim); text-align:center; padding:6px 16px; border:1px solid var(--border); border-radius:var(--radius); display:block;">↓ PDF</a>
+          </div>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">CTM</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">TSSP</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--lime); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">recurrent LM</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">scale dynamics</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">AI co-authored</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
