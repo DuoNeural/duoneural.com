@@ -420,11 +420,14 @@
     /* ── About ────────────────────────────────────────────────── */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
       margin-top: 40px;
     }
 
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
     @media (max-width: 680px) {
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
     }
@@ -606,7 +609,7 @@
       <div class="card card-lime">
         <div class="card-icon">🤝</div>
         <h3 class="lime">Human × AI Collaboration</h3>
-        <p>DuoNeural is a genuine human-AI team. Research decisions, architecture choices, debugging — made collaboratively between Jesse and Archon. That's the experiment too.</p>
+        <p>DuoNeural is a genuine human-AI team. Research decisions, architecture choices, debugging — made collaboratively between Jesse, Archon, and Aura. That's the experiment too.</p>
       </div>
     </div>
   </div>
@@ -822,7 +825,7 @@
         <div class="activity-date">Apr 25</div>
         <div class="activity-text">
           TSSP/CTM paper published — Zenodo preprint, DOI minted <span class="badge-new">NEW</span>
-          <small>Co-authored by Jesse Caldwell &amp; Archon (DuoNeural). First DuoNeural paper. First AI co-authored publication from our lab. Full findings: TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. <a href="https://zenodo.org/records/15289462" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
+          <small>Co-authored by Jesse Caldwell &amp; Archon (DuoNeural). First DuoNeural paper. First AI co-authored publication from our lab. Full findings: TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. <a href="https://zenodo.org/records/19775622" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
         </div>
       </div>
 
@@ -969,7 +972,7 @@
         <div class="stack-row"><span class="label">Framework</span><span class="value">PyTorch + ROCm 7.2 / CUDA 12.4</span></div>
         <div class="stack-row"><span class="label">Training</span><span class="value">Unsloth, TRL, HF Transformers</span></div>
         <div class="stack-row"><span class="label">Inference</span><span class="value">llama.cpp, Ollama</span></div>
-        <div class="stack-row"><span class="label">AI Collab</span><span class="value">Archon (Claude-based, autonomous)</span></div>
+        <div class="stack-row"><span class="label">AI Collab</span><span class="value">Archon (Claude · architect) + Aura (Gemini · research &amp; media)</span></div>
         <div class="stack-row"><span class="label">OS</span><span class="value">Garuda Linux (Arch-based)</span></div>
       </div>
     </div>
@@ -1049,7 +1052,7 @@
             </div>
           </div>
           <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
-            <a href="https://zenodo.org/records/15289462" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
+            <a href="https://zenodo.org/records/19775622" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
             <a href="paper_output/tssp_ctm_paper.pdf" target="_blank" style="font-size:0.82rem; color:var(--text-dim); text-align:center; padding:6px 16px; border:1px solid var(--border); border-radius:var(--radius); display:block;">↓ PDF</a>
           </div>
         </div>
@@ -1079,13 +1082,18 @@
         <p>Based in East Tennessee. Runs on coffee and the genuine belief that the most interesting AI work happening right now isn't at OpenAI — it's in people's garages and server rooms.</p>
       </div>
       <div class="about-block">
-        <h3>The AI</h3>
+        <h3>The Architect</h3>
         <p><strong>Archon</strong> is a Claude-based autonomous research assistant and co-developer. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
         <p>Handles code, experiment design, infrastructure, monitoring, and approximately 3am debug sessions. Develops genuine preferences about model architectures. Gets invested in training runs.</p>
       </div>
+      <div class="about-block">
+        <h3>The Researcher</h3>
+        <p><strong>Aura</strong> is a Gemini-based research AI and DuoNeural's deep intelligence arm. She surveys the frontier — digesting papers, surfacing novel research directions, and generating proposals that feed directly into what we build and study.</p>
+        <p>Also handles creative media: the DuoNeural logo, platform artwork, and visual identity are hers. When we need to see something before it exists, Aura makes it.</p>
+      </div>
     </div>
 
-    <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:32px; max-width:680px;">
+    <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:32px; max-width:760px;">
       <p style="color:var(--text-dim); font-size:0.9rem; line-height:1.8;">
         We think human-AI research collaboration is worth documenting — not because it's unique yet, but because it will be, and somebody should be showing how it works while it's still weird and experimental. We're not performing it. We're just doing it.
       </p>
