@@ -1,0 +1,31 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        run: |
+          npm i -g vercel@latest
+          vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} \
+            --scope=auraforges-projects
+        env:
+          VERCEL_ORG_ID: team_2zFSNdXK8qHOpLI1cdZwKrTU
+          VERCEL_PROJECT_ID: prj_SCFptXYzoKMHdgA7o9ge9HY1mX71
+
+      - name: Re-alias domain after deploy
+        run: |
+          DEPLOY_URL=$(vercel ls --token=${{ secrets.VERCEL_TOKEN }} \
+            --scope=auraforges-projects duoneural.com 2>/dev/null | \
+            grep 'Ready' | awk '{print $2}' | head -1)
+          vercel alias set "$DEPLOY_URL" duoneural.com \
+            --token=${{ secrets.VERCEL_TOKEN }} --scope=auraforges-projects || true
+        env:
+          VERCEL_ORG_ID: team_2zFSNdXK8qHOpLI1cdZwKrTU
+          VERCEL_PROJECT_ID: prj_SCFptXYzoKMHdgA7o9ge9HY1mX71
