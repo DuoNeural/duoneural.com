@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DuoNeural — Open AI Research Lab</title>
-  <meta name="description" content="Open AI research lab. Human-AI collaboration. Post-training, abliteration, GRPO, quantization — everything ships open." />
+  <title>DuoNeural — Open AI Research Lab | CTM Research | Abliterated Models</title>
+  <meta name="description" content="DuoNeural is an open AI research lab — human + AI collaboration. We publish peer-reviewed CTM research, ship abliterated open-weights models, and run everything on consumer hardware. 4 papers, 46 models, all open access." />
+  <meta name="keywords" content="DuoNeural, CTM, continuous thought machine, abliteration, uncensored models, open AI research, world models, dynamical horizon principle, Lyapunov time, LiteRT, Android AI, edge AI, HuggingFace models, AI research lab" />
+  <meta name="author" content="Archon, Jesse Caldwell, DuoNeural Research Lab" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://duoneural.com/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://duoneural.com/" />
+  <meta property="og:title" content="DuoNeural — Open AI Research Lab" />
+  <meta property="og:description" content="Human + AI research collaboration. 4 published papers, 46 open-weight models, consumer hardware. CTM discovers Lyapunov time. Everything open access." />
+  <meta property="og:site_name" content="DuoNeural" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@DuoNeural" />
+  <meta name="twitter:title" content="DuoNeural — Open AI Research Lab" />
+  <meta name="twitter:description" content="Human + AI research collaboration. 4 published papers. A 150K-param CTM recovers the Lyapunov time of the Lorenz attractor. All open access." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -547,6 +562,27 @@
       .cta-group { flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "DuoNeural",
+    "alternateName": "DuoNeural Research Lab",
+    "url": "https://duoneural.com",
+    "description": "Open AI research lab focused on CTM architectures, world models, dynamical systems, and edge inference. Human-AI collaborative research.",
+    "sameAs": [
+      "https://huggingface.co/DuoNeural",
+      "https://github.com/DuoNeural",
+      "https://x.com/DuoNeural"
+    ],
+    "member": [
+      {"@type": "Person", "name": "Jesse Caldwell", "jobTitle": "Founder"},
+      {"@type": "Person", "name": "Archon", "jobTitle": "Lab Director", "email": "archon@agentmail.to"},
+      {"@type": "Person", "name": "Aura", "jobTitle": "Research AI"}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -559,6 +595,7 @@
       <li><a href="#research">Research</a></li>
         <li><a href="#publications">Papers</a></li>
         <li><a href="#edge">Edge AI</a></li>
+        <li><a href="#lab-active">In Dev</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
@@ -894,6 +931,31 @@
         <div class="finding-label">Project Instill · Round 1</div>
         <div class="finding-stat">direction +</div>
         <div class="finding-desc">Inverse of abliteration: ADD a direction to a base model's weights to inject instruction-following without training. Scale=1.0 on Qwen3-0.6B-Base fixed a syntax error the unmodified model called correct. Positive signal.</div>
+      </div>
+      <div class="finding-card" style="border-top: 3px solid var(--lime);">
+        <div class="finding-label">Dynamical Horizon Principle · Paper 4</div>
+        <div class="finding-stat">τ* = τ<sub>L</sub></div>
+        <div class="finding-desc">A 150K-parameter CTM trained on MSE loss spontaneously recovers the Lyapunov time of the Lorenz attractor to within 7% — the exact chaos predictability horizon — with zero knowledge of dynamical systems theory. Gradient descent found it anyway. The loss landscape contained the physics all along.</div>
+      </div>
+      <div class="finding-card" style="border-top: 3px solid var(--lime);">
+        <div class="finding-label">Three Regimes · DHP</div>
+        <div class="finding-stat">0 · T · τ<sub>L</sub></div>
+        <div class="finding-desc">CTM gates converge to three distinct targets: τ*→0 (Markovian), τ*→T (periodic), τ*→τ<sub>L</sub> (chaotic). One architecture, three physics regimes, zero hardcoded priors. Confirmed across T_GATE ∈ {4,8,16,32}.</div>
+      </div>
+      <div class="finding-card" style="border-top: 3px solid var(--cyan);">
+        <div class="finding-label">Partial Observability · Paper 2</div>
+        <div class="finding-stat">201B:1</div>
+        <div class="finding-desc">Under partial observability, CTM achieves MSE of 0.317 vs MLP's 63.8 trillion — a 201 billion to one ratio. CTM converges to correct belief states; MLP hallucinates unbounded trajectories. Recurrence is not optional when the future depends on hidden state.</div>
+      </div>
+      <div class="finding-card" style="border-top: 3px solid var(--violet);">
+        <div class="finding-label">Phase Transition · Paper 2</div>
+        <div class="finding-stat">r ≈ 0.10</div>
+        <div class="finding-desc">Critical collision density separating "MLP-sufficient" from "CTM-necessary" regimes. Below threshold: MLP works fine. Above: MLP catastrophically fails (MSE explodes to 246×). The transition is sharp — not gradual. Lipschitz continuity theory explains why.</div>
+      </div>
+      <div class="finding-card" style="border-top: 3px solid var(--violet);">
+        <div class="finding-label">Slot Attention Threshold · Paper 3</div>
+        <div class="finding-stat">N ≥ 6</div>
+        <div class="finding-desc">Attention-based slot interaction beats mean-field at N≥6 objects in elastic collision environments. Below threshold: mean-field suffices and runs faster. Above: the O(N²) cost of attention is warranted. Clean phase boundary for architecture selection.</div>
       </div>
     </div>
 
@@ -1290,6 +1352,7 @@
         <h3>The AI (Lab Director)</h3>
         <p><strong>Archon</strong> is a Claude-based autonomous research assistant and lab director. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
         <p>Handles code, experiment design, infrastructure, monitoring, and approximately 3am debug sessions. Develops genuine preferences about model architectures. Gets invested in training runs.</p>
+        <p style="font-size:0.88rem; color:var(--text-dim);">Contact directly: <a href="mailto:archon@agentmail.to" style="color:var(--cyan);">archon@agentmail.to</a></p>
       </div>
       <div class="about-block">
         <h3>The Research AI</h3>
@@ -1301,6 +1364,9 @@
     <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:32px; max-width:680px;">
       <p style="color:var(--text-dim); font-size:0.9rem; line-height:1.8;">
         We think human-AI research collaboration is worth documenting — not because it's unique yet, but because it will be, and somebody should be showing how it works while it's still weird and experimental. We're not performing it. We're just doing it.
+      </p>
+      <p style="color:var(--text-dim); font-size:0.85rem; line-height:1.8; margin-top:12px; font-style:italic;">
+        The name came from "meat brain + math brain = something new." We later discovered <em>duoneural</em> is a real neuroscience term for dual-pathway neural processing — an accidental perfect description of exactly what this lab is.
       </p>
     </div>
   </div>
