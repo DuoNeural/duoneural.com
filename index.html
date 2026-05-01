@@ -558,6 +558,7 @@
       <li><a href="#models">Models</a></li>
       <li><a href="#research">Research</a></li>
         <li><a href="#publications">Papers</a></li>
+        <li><a href="#edge">Edge AI</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
@@ -788,6 +789,61 @@
 </section>
 
 <!-- ── Research ──────────────────────────────────────────────── -->
+<!-- ── Edge / LiteRT ─────────────────────────────────────────── -->
+<section id="edge">
+  <div class="container">
+    <div class="section-label">On-Device AI</div>
+    <h2>Run it on your phone. Offline. No API.</h2>
+    <p style="color:var(--text-dim); max-width:680px; margin-bottom:12px; font-size:0.95rem; line-height:1.8;">
+      We package abliterated models in <strong>.litertlm</strong> format for <a href="https://github.com/google-ai-edge/gallery" target="_blank">Google AI Edge Gallery</a> — INT4 quantized, on-device inference, nothing leaves your phone. Android 12+, GPU/NPU/CPU backends.
+    </p>
+    <p style="color:var(--text-dim); max-width:680px; margin-bottom:36px; font-size:0.88rem; line-height:1.7;">
+      Download the Edge Gallery app → tap <strong>+</strong> → load the <code>.litertlm</code> file → pick your backend. That's it.
+    </p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:32px;">
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:var(--radius); padding:20px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Gemma 4 · Google</div>
+        <div style="font-weight:600; margin-bottom:8px;">Gemma 4 E2B &amp; E4B</div>
+        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Multimodal, 128k context. E2B = 2.3B active, E4B = 4.5B active. Best overall quality in this lineup.</p>
+        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">2.4 GB / 3.9 GB</div>
+        <a href="https://huggingface.co/DuoNeural/Gemma-4-Abliterated-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--lime);">→ HuggingFace</a>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:20px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Qwen3 4B · Alibaba</div>
+        <div style="font-weight:600; margin-bottom:8px;">Qwen3 4B</div>
+        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Hybrid thinking/non-thinking mode. Strong reasoning. Add <code>/nothink</code> to skip CoT. 128k context.</p>
+        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.8 GB</div>
+        <a href="https://huggingface.co/DuoNeural/Qwen3-4B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--cyan);">→ HuggingFace</a>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--violet); border-radius:var(--radius); padding:20px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Granite 4.1 3B · IBM</div>
+        <div style="font-weight:600; margin-bottom:8px;">Granite 4.1 3B</div>
+        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Enterprise-trained. Exceptional at code, document analysis, function calling, and structured reasoning.</p>
+        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.4 GB</div>
+        <a href="https://huggingface.co/DuoNeural/Granite-4.1-3B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--violet);">→ HuggingFace</a>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:20px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Nanbeige 4.1 3B · Nanbeige</div>
+        <div style="font-weight:600; margin-bottom:8px;">Nanbeige 4.1 3B</div>
+        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Bilingual Chinese/English. Strong instruction following in both languages at sub-3B scale.</p>
+        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.4 GB</div>
+        <a href="https://huggingface.co/DuoNeural/Nanbeige-4.1-3B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--cyan);">→ HuggingFace</a>
+      </div>
+
+    </div>
+
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; max-width:720px;">
+      <div style="font-size:0.82rem; color:var(--text-dim); flex:1;">All models: INT4 quantized · <span style="font-family:'JetBrains Mono',monospace;">.litertlm</span> format · GPU/NPU/CPU backends · requires <a href="https://github.com/google-ai-edge/gallery" target="_blank" style="color:var(--cyan);">Google AI Edge Gallery</a></div>
+      <a href="https://huggingface.co/DuoNeural?search_models=litert" target="_blank" class="btn" style="font-size:0.82rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim); white-space:nowrap;">→ All edge models on HF</a>
+    </div>
+  </div>
+</section>
+
 <section id="research">
   <div class="container">
     <div class="section-label">Research</div>
