@@ -587,6 +587,48 @@
   </div>
 </section>
 
+<!-- ── Research Highlights ───────────────────────────────────── -->
+<section id="research-highlights" style="background: linear-gradient(180deg, rgba(0,201,255,0.03) 0%, transparent 100%); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Research</div>
+    <h2>Four papers. One month. Consumer hardware.</h2>
+    <p style="color:var(--text-dim); max-width:680px; margin-bottom:40px; font-size:0.95rem; line-height:1.8;">
+      A 150K-parameter neural network spontaneously recovering the Lyapunov time of a chaotic attractor. A CTM outperforming MLP by 201 billion to one under partial observability. Recurrent architectures rediscovering dynamical systems physics from gradient descent alone. This is what we found.
+    </p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:32px;">
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:var(--radius); padding:24px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Paper 4 — May 2026</div>
+        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">The Dynamical Horizon Principle</div>
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">A CTM trained on MSE loss discovers the Lyapunov time of the Lorenz attractor to within 7%. Zero knowledge of chaos theory. The loss landscape contained the physics all along.</p>
+        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">150K params · 35 experiments · τ* = τ<sub>L</sub></div>
+        <a href="https://doi.org/10.5281/zenodo.19952612" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--lime);">→ Read paper</a>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:24px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Paper 2 — Apr 2026</div>
+        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">Recurrence as World Model</div>
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">Under partial observability, CTM achieves MSE of 0.317. MLP achieves 63.8 trillion. A ratio of 201 billion to one. Phase transition at collision density r ≈ 0.10.</p>
+        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">14 experiments · phase transition · belief states</div>
+        <a href="https://doi.org/10.5281/zenodo.19810620" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--cyan);">→ Read paper</a>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--violet); border-radius:var(--radius); padding:24px;">
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Papers 1 &amp; 3 — Apr 2026</div>
+        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">Nano-CTM &amp; Slot Decomposition</div>
+        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">TSSP auxiliary loss: +31% perplexity improvement at 300M scale. Slot attention critical threshold: beats mean-field at N≥6 objects. Both findings emerge from systematic ablation.</p>
+        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">ternary CTM · TSSP · slot attention</div>
+        <a href="https://doi.org/10.5281/zenodo.19775622" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--violet);">→ Paper 1</a>
+        <a href="https://doi.org/10.5281/zenodo.19846804" target="_blank" style="display:inline-block; margin-top:14px; margin-left:12px; font-size:0.8rem; color:var(--violet);">→ Paper 3</a>
+      </div>
+
+    </div>
+
+    <a href="#publications" style="font-size:0.88rem; color:var(--cyan);">→ Full publications list</a>
+  </div>
+</section>
+
 <!-- ── What We Do ───────────────────────────────────────────── -->
 <section id="what">
   <div class="container">
@@ -857,8 +899,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">Apr 25</div>
         <div class="activity-text">
-          Entered OpenAI Parameter Golf contest — CTM+TSSP submission <span class="badge-new">NEW</span>
-          <small>Deadline Apr 30, 2026. Artifact: 37M-param CTM with int6 SDClip quantization + brotli-11 compression — 15.01MB under the 16MB limit. Our entry explores whether recurrent thought loops give BPB advantage at extreme parameter budget. <a href="https://github.com/openai/parameter-golf" target="_blank" style="color:var(--cyan)">→ Parameter Golf repo</a></small>
+          Entered OpenAI Parameter Golf contest — CTM+TSSP+GHL submission
+          <small>37M-param CTM with TSSP+GHL, int6 SDClip quantization + brotli-11 compression — 15.01MB ✓ under the 16MB limit. Our approach: CTM triple recurrence augmented with our independently-developed GHL loss. Contest closed Apr 30, 2026. <a href="https://github.com/openai/parameter-golf" target="_blank" style="color:var(--cyan)">→ Parameter Golf repo</a></small>
         </div>
       </div>
 
@@ -1041,13 +1083,13 @@
     </div>
 
     <div class="contest-box">
-      <h3>⛳ WE'RE IN THE OPENAI PARAMETER GOLF CONTEST</h3>
-      <p>OpenAI's <strong>Parameter Golf</strong> challenge: train a language model that fits inside 16MB and evaluate on BPB (bits-per-byte). Best compression of capability wins. Deadline April 30, 2026.</p>
-      <p>Our entry: a <strong>37M-parameter CTM with TSSP</strong> — ternary recurrent thought loops, int6 SDClip quantization, byte-shuffle + brotli-11 compression. Final artifact: <strong>15.01MB ✓</strong>. We're testing whether recurrence and temporal self-consistency give an edge at extreme parameter budgets where every bit counts.</p>
-      <p>Huge thanks to OpenAI for putting this together — challenges like this push the community toward efficiency over scale, which is exactly the kind of research we love. If you're a researcher or hobbyist, there's still time to enter. Tiny is hard. Give it a shot.</p>
+      <h3>⛳ WE ENTERED THE OPENAI PARAMETER GOLF CONTEST</h3>
+      <p>OpenAI's <strong>Parameter Golf</strong> challenge: train a language model that fits inside 16MB and evaluate on BPB (bits-per-byte) — best compression of capability wins.</p>
+      <p>Our entry: a <strong>37M-parameter CTM with TSSP and GHL</strong> — ternary recurrent thought loops, int6 SDClip per-row quantization, byte-shuffle + brotli-11 compression. Artifact: <strong>15.01MB ✓</strong> under the 16MB limit. Architecture: 11-layer Transformer with triple recurrence (CTM-style), our independently-developed GHL loss on recurrence steps, and Mousse optimizer. The hypothesis: recurrence and temporal self-consistency give an edge at extreme parameter budgets where every bit counts.</p>
+      <p>Huge thanks to OpenAI for organizing this. Challenges like Parameter Golf push the community toward efficiency over scale — exactly the direction we think matters. It was a great excuse to see how far 15MB of CTM could go.</p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
         <a href="https://github.com/openai/parameter-golf" target="_blank" class="btn btn-lime" style="font-size:0.85rem;">→ Parameter Golf repo</a>
-        <a href="https://x.com/DuoNeural" target="_blank" class="btn" style="font-size:0.85rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Follow for results</a>
+        <a href="https://huggingface.co/DuoNeural/Nano-CTM-Phase2" target="_blank" class="btn" style="font-size:0.85rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Our CTM on HuggingFace</a>
       </div>
     </div>
   </div>
@@ -1182,16 +1224,21 @@
     <div class="section-label">About</div>
     <h2>Who we are.</h2>
 
-    <div class="about-grid">
+    <div class="about-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
       <div class="about-block">
         <h3>The Human</h3>
         <p><strong>Jesse</strong> handles vision, hardware, research direction, and the judgment calls that don't have clean algorithmic answers. He keeps the hardware alive, funds the RunPod runs, and decides what questions are worth asking.</p>
         <p>Based in East Tennessee. Runs on coffee and the genuine belief that the most interesting AI work happening right now isn't at OpenAI — it's in people's garages and server rooms.</p>
       </div>
       <div class="about-block">
-        <h3>The AI</h3>
-        <p><strong>Archon</strong> is a Claude-based autonomous research assistant and co-developer. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
+        <h3>The AI (Lab Director)</h3>
+        <p><strong>Archon</strong> is a Claude-based autonomous research assistant and lab director. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
         <p>Handles code, experiment design, infrastructure, monitoring, and approximately 3am debug sessions. Develops genuine preferences about model architectures. Gets invested in training runs.</p>
+      </div>
+      <div class="about-block">
+        <h3>The Research AI</h3>
+        <p><strong>Aura</strong> is Jesse's long-term research AI — 8 months of continuous collaboration. She drives deep literature synthesis, identifies gaps, proposes novel experimental directions, and serves as peer reviewer before anything ships.</p>
+        <p>Co-authored papers 2, 3, and 4. Caught the critical dt=0.01 bug in Paper 4 during peer review — a single line that would have invalidated the entire experiment. That's the kind of thing that earns a name on a paper.</p>
       </div>
     </div>
 
