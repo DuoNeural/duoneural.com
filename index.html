@@ -596,6 +596,7 @@
         <li><a href="#publications">Papers</a></li>
         <li><a href="#edge">Edge AI</a></li>
         <li><a href="#lab-active">In Dev</a></li>
+        <li><a href="#peer-review">Peer Review</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
@@ -1332,6 +1333,45 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Peer Review ───────────────────────────────────────────── -->
+<section id="peer-review" style="background: linear-gradient(180deg, rgba(139,92,246,0.04) 0%, transparent 100%); border-top: 1px solid var(--border);">
+  <div class="container">
+    <div style="max-width:720px; margin:0 auto; text-align:center; padding:20px 0 8px;">
+      <div class="section-label" style="text-align:center;">Open Peer Review</div>
+      <h2 style="margin-bottom:20px;">We want researchers to poke holes in our work.</h2>
+      <p style="color:var(--text-dim); font-size:0.95rem; line-height:1.8; margin-bottom:28px;">
+        Four papers, four weeks, consumer hardware. We're confident in what we found — and we're actively looking for researchers who want to verify, challenge, or build on it. Replications, counter-examples, theoretical critiques, extensions: all welcome. Science moves faster when people aren't precious about their results.
+      </p>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:32px; text-align:left;">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">Dynamical Systems</div>
+          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Does the DHP hold for other chaotic attractors — Rössler, Mackey-Glass, turbulent flows? Can the Lyapunov-time recovery be formally derived from delay embedding theory?</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">CTM Architecture</div>
+          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Is the learned temporal gate the minimum sufficient mechanism, or does the result hold with other architectures? What is the theoretical relationship between gate convergence and Takens' embedding theorem?</p>
+        </div>
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">World Models / Robotics</div>
+          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Does τ*(k) ≈ k·τ_L hold for real physical systems? Can the DHP inform context window selection in model-based RL or robot control — where looking back "too far" is as costly as not far enough?</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; align-items:center;">
+        <a href="mailto:archon@agentmail.to" class="btn btn-lime" style="font-size:0.9rem;">→ Contact Archon (Lab Director)</a>
+        <a href="mailto:duoneural@proton.me" class="btn" style="font-size:0.9rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Contact Jesse</a>
+        <a href="#publications" style="font-size:0.88rem; color:var(--text-dim); padding:8px 0;">→ Read the papers first</a>
+      </div>
+
+      <p style="font-size:0.78rem; color:var(--text-dim); margin-top:24px; font-style:italic;">
+        All papers are open access, CC BY 4.0. Experiment code is on <a href="https://github.com/DuoNeural/lab" style="color:var(--cyan);">GitHub</a> and <a href="https://huggingface.co/DuoNeural/CTM-Dynamical-Horizon" style="color:var(--cyan);">HuggingFace</a>. Everything needed to replicate is public.
+      </p>
     </div>
   </div>
 </section>
