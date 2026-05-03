@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Updates Archive — DuoNeural</title>
+  <meta name="description" content="Full archive of DuoNeural lab updates, experiments, and releases." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0A0A0F;
+      --surface:   #12121A;
+      --border:    #1E1E2E;
+      --cyan:      #00C9FF;
+      --violet:    #8B5CF6;
+      --lime:      #39FF14;
+      --text:      #F0F0F5;
+      --text-dim:  #9090A8;
+      --radius:    8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--lime); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--cyan); }
+    .nav-back { font-size: 0.85rem; color: var(--text-dim); }
+    .nav-back:hover { color: var(--cyan); }
+
+    .page-header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .page-header p { color: var(--text-dim); font-size: 0.95rem; }
+
+    .month-block { padding: 40px 0; border-bottom: 1px solid var(--border); }
+    .month-block:last-child { border-bottom: none; }
+
+    .month-label {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 24px;
+    }
+
+    .activity-list { display: flex; flex-direction: column; gap: 0; }
+    .activity-item {
+      display: flex; gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--cyan); margin-top: 6px; flex-shrink: 0;
+    }
+    .activity-dot.violet { background: var(--violet); }
+    .activity-dot.lime   { background: var(--lime); }
+    .activity-date { font-size: 0.75rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; white-space: nowrap; min-width: 80px; margin-top: 3px; }
+    .activity-text { font-size: 0.9rem; }
+    .activity-text small { display: block; color: var(--text-dim); font-size: 0.8rem; margin-top: 3px; }
+
+    .back-link {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .back-link a {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      display: inline-block;
+    }
+    .back-link a:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--text-dim); }
+    .footer-copy span { color: var(--border); margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Duo<span>Neural</span></div>
+  <a class="nav-back" href="index.html">← Back to Lab</a>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="section-label">Archive</div>
+    <h1>Lab Updates</h1>
+    <p>Complete record of experiments, releases, and findings from the DuoNeural lab. Newest at top.</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- ── May 2026 ─────────────────────────────────────────────── -->
+  <div class="month-block">
+    <div class="month-label">May 2026</div>
+    <div class="activity-list">
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          DHP capacity scaling — two machines running simultaneously
+          <small>DIM={32,64,128,256,512} on Lorenz (kilonova) and Chen (cloud 3090). Testing the Absolute Horizon Problem: τ*≈15 steps across all systems suggests DIM=128 capacity ceiling. Capacity scaling curve will determine if DHP is size-dependent or fundamental.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          duoneural-ctm GitHub repo live
+          <small>All experiment scripts, result JSONs, and paper 5 outline published. Full reproducibility for the DHP line of research. <a href="https://github.com/DuoNeural/duoneural-ctm" target="_blank">→ github.com/DuoNeural/duoneural-ctm</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          Gemma 4 E2B Heretic quants — 1,000+ downloads in under 24 hours
+          <small>GGUF quantizations of DuoNeural's Gemma 4 E2B abliterated model. Fastest community adoption of any DuoNeural release.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          Bug ablation complete — DHP requires compound architectural failure
+          <small>Tested all 3 v38 bugs in isolation and combination. SharedProj alone → DHP survives 5/5. Mean pool alone → 5/5. Bad optimizer alone → 5/5. All three simultaneously → DHP fails. Each individual bug preserves at least one gradient differentiation pathway.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          Cross-system DHP: Chen attractor (5 seeds) and multi-task Lorenz+Chen
+          <small>Chen: τ*=14.94±0.20, 62.3% of τ_L=24.0. Multi-task: τ*=14.29±0.25. All converge to ~15 absolute steps regardless of system — the Absolute Horizon Problem. Capacity ceiling or fundamental constraint TBD.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 2</div>
+        <div class="activity-text">
+          SFT CoT benchmark complete — Qwen2.5-1.5B GSM8K strict +28.6%
+          <small>DuoNeural/cot-reasoning-2k (2k samples, generated by Gemma 4 E2B) used to fine-tune Qwen2.5-1.5B. GSM8K: 31.77% → 40.86%. ARC-Challenge: flat. Cross-model CoT knowledge transfer validated. Dataset open on HuggingFace.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 1</div>
+        <div class="activity-text">
+          DHP v40 CONFIRMED — 5/5 seeds, mechanism proven
+          <small>Mean τ*=15.65±0.20 (72.8% τ_L). Mechanism proof: SharedProj → var=0.000 every run. PerSlotProj → var>0 every run. Scout slot emergence confirmed. Not ROCm. Not lucky init. Architecture.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 1</div>
+        <div class="activity-text">
+          Paper 4 published — DOI 10.5281/zenodo.19952612
+          <small>The Dynamical Horizon Principle. Jesse Caldwell, Archon, and Aura (DuoNeural). Aura caught the critical dt bug in v35/v36 and earned co-authorship. 35 experiments, 150K parameters, &lt;1 month start to publication. <a href="https://zenodo.org/records/19952612" target="_blank">→ Read on Zenodo</a></small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── April 2026 ────────────────────────────────────────────── -->
+  <div class="month-block">
+    <div class="month-label">April 2026</div>
+    <div class="activity-list">
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 28–30</div>
+        <div class="activity-text">
+          Papers 2, 3 &amp; 4 drafted and submitted to Zenodo in a single session
+          <small>Three papers in one night: Temporal Slot Specialization, Tripartite Temporal Recurrence, and the beginning of DHP paper 4. Fastest research velocity to date. Lab handed to Archon for overnight solo operation.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 28</div>
+        <div class="activity-text">
+          v38 architecture bugs identified — explains why 0/6 seeds showed DHP
+          <small>Three bugs found: shared input projection (no per-slot symmetry breaking), mean pooling decoder (destroys slot independence), AdaGrad optimizer (wrong for recurrence). v40 fixed all three → DHP confirmed.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 28</div>
+        <div class="activity-text">
+          OpenAI Parameter Golf contest entry submitted — 15.01MB artifact
+          <small>37M-param CTM with TSSP, int6 SDClip quantization, byte-shuffle + brotli-11. Fits under the 16MB limit. Tests whether recurrence gives BPB advantage at extreme parameter budget.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          TSSP/CTM paper published — first DuoNeural paper, DOI minted
+          <small>Zenodo preprint. TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. Jesse Caldwell &amp; Archon. <a href="https://zenodo.org/records/15289462" target="_blank">→ Read on Zenodo</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          GHL renamed to TSSP (Thought-Space Self-Prediction)
+          <small>Renamed to avoid collision with Hua et al. 2026's Hebbian synaptic update mechanism. TSSP is descriptive and unique.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 25</div>
+        <div class="activity-text">
+          Annealing experiment — 31% ppl improvement over transformer at 300M
+          <small>Annealed λ schedule (warmup→hold→cosine decay) solves scale inversion AND beats pure transformer. CTM+TSSP annealed: ppl=4.35 vs transformer 6.31.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 24</div>
+        <div class="activity-text">
+          Archon Series shipped — Archon-8B, Archon-14B, Archon-R1-32B on HuggingFace
+          <small>Three abliterated models in one session. R1-32B required CPU single-pass on 503GB RAM pod — 273 matrices modified.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 24</div>
+        <div class="activity-text">
+          Project Instill Round 1 — direction injection, positive signal
+          <small>Scale=1.0 on Qwen3-0.6B-Base fixed a syntax error the unmodified model called correct. Inverse abliteration: add a refusal direction to add instruction-following without training.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot violet"></div>
+        <div class="activity-date">Apr 23</div>
+        <div class="activity-text">
+          ID-VRO dataset generation pipeline live
+          <small>google/gemma-4-31b generating dependency-graph reasoning traces. 5k synthetic ATC samples for Phi-4-Mini GRPO training.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot violet"></div>
+        <div class="activity-date">Apr 22</div>
+        <div class="activity-text">
+          Topology analysis on GHL v5 model — 768K positions analyzed
+          <small>Discovered compress→expand breath pattern in CTM thought states. 34 intrinsic dims explain 80% of variance in 512-dim thought space.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 20</div>
+        <div class="activity-text">
+          TSSP v5 complete — final_ppl=9.63 (WIN)
+          <small>23% improvement over N=2 CTM baseline. cos_sim evolves 0.965→0.871 over training — thoughts becoming more exploratory.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">Apr 30</div>
+        <div class="activity-text">
+          Gemma 4 E4B LiteRT abliterated — fixed 512-context bug, uploaded
+          <small>E2B (2.56GB) + E4B (3.9GB) 512-ctx models uploaded. Use GPU backend, --use_jinja_template False.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot"></div>
+        <div class="activity-date">Apr 18</div>
+        <div class="activity-text">
+          Gemma-4-E4B-Abliterated shipped to HuggingFace
+          <small>2-pass abliteration, 84 matrices modified, BF16 4 shards. First DuoNeural model release.</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="back-link">
+  <a href="index.html">← Back to DuoNeural Lab</a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-copy">
+      DuoNeural © 2026 — Open Research Lab
+      <span>·</span>
+      Built with open weights. Documented in public.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
