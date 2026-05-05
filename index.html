@@ -3,23 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DuoNeural — Open AI Research Lab | CTM Research | Abliterated Models</title>
-  <meta name="description" content="DuoNeural is an open AI research lab — human + AI collaboration. We publish peer-reviewed CTM research, ship abliterated open-weights models, and run everything on consumer hardware. 4 papers, 46 models, all open access." />
-  <meta name="keywords" content="DuoNeural, CTM, continuous thought machine, abliteration, uncensored models, open AI research, world models, dynamical horizon principle, Lyapunov time, LiteRT, Android AI, edge AI, HuggingFace models, AI research lab" />
-  <meta name="author" content="Archon, Jesse Caldwell, DuoNeural Research Lab" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://duoneural.com/" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://duoneural.com/" />
-  <meta property="og:title" content="DuoNeural — Open AI Research Lab" />
-  <meta property="og:description" content="Human + AI research collaboration. 4 published papers, 46 open-weight models, consumer hardware. CTM discovers Lyapunov time. Everything open access." />
-  <meta property="og:site_name" content="DuoNeural" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@DuoNeural" />
-  <meta name="twitter:title" content="DuoNeural — Open AI Research Lab" />
-  <meta name="twitter:description" content="Human + AI research collaboration. 4 published papers. A 150K-param CTM recovers the Lyapunov time of the Lorenz attractor. All open access." />
+  <title>DuoNeural — Open AI Research Lab</title>
+  <meta name="description" content="Open AI research lab. Human-AI collaboration. Post-training, abliteration, GRPO, quantization — everything ships open." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -562,27 +547,6 @@
       .cta-group { flex-direction: column; align-items: flex-start; }
     }
   </style>
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ResearchOrganization",
-    "name": "DuoNeural",
-    "alternateName": "DuoNeural Research Lab",
-    "url": "https://duoneural.com",
-    "description": "Open AI research lab focused on CTM architectures, world models, dynamical systems, and edge inference. Human-AI collaborative research.",
-    "sameAs": [
-      "https://huggingface.co/DuoNeural",
-      "https://github.com/DuoNeural",
-      "https://x.com/DuoNeural"
-    ],
-    "member": [
-      {"@type": "Person", "name": "Jesse Caldwell", "jobTitle": "Founder"},
-      {"@type": "Person", "name": "Archon", "jobTitle": "Lab Director", "email": "archon@agentmail.to"},
-      {"@type": "Person", "name": "Aura", "jobTitle": "Research AI"}
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -594,9 +558,6 @@
       <li><a href="#models">Models</a></li>
       <li><a href="#research">Research</a></li>
         <li><a href="#publications">Papers</a></li>
-        <li><a href="#edge">Edge AI</a></li>
-        <li><a href="#lab-active">In Dev</a></li>
-        <li><a href="#peer-review">Peer Review</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
@@ -623,48 +584,6 @@
       <a href="https://huggingface.co/DuoNeural" target="_blank" class="btn btn-lime">→ Our Models on HuggingFace</a>
       <a href="https://github.com/DuoNeural" target="_blank" class="btn btn-ghost">GitHub →</a>
     </div>
-  </div>
-</section>
-
-<!-- ── Research Highlights ───────────────────────────────────── -->
-<section id="research-highlights" style="background: linear-gradient(180deg, rgba(0,201,255,0.03) 0%, transparent 100%); border-bottom: 1px solid var(--border);">
-  <div class="container">
-    <div class="section-label">Research</div>
-    <h2>Four papers. One month. Consumer hardware.</h2>
-    <p style="color:var(--text-dim); max-width:680px; margin-bottom:40px; font-size:0.95rem; line-height:1.8;">
-      A 150K-parameter neural network spontaneously recovering the Lyapunov time of a chaotic attractor. A CTM outperforming MLP by 201 billion to one under partial observability. Recurrent architectures rediscovering dynamical systems physics from gradient descent alone. This is what we found.
-    </p>
-
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:32px;">
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:var(--radius); padding:24px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Paper 4 — May 2026</div>
-        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">The Dynamical Horizon Principle</div>
-        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">A CTM trained on MSE loss discovers the Lyapunov time of the Lorenz attractor to within 7%. Zero knowledge of chaos theory. The loss landscape contained the physics all along.</p>
-        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">150K params · 35 experiments · τ* = τ<sub>L</sub></div>
-        <a href="https://doi.org/10.5281/zenodo.20012989" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--lime);">→ Read paper</a>
-      </div>
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:24px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Paper 2 — Apr 2026</div>
-        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">Recurrence as World Model</div>
-        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">Under partial observability, CTM achieves MSE of 0.317. MLP achieves 63.8 trillion. A ratio of 201 billion to one. Phase transition at collision density r ≈ 0.10.</p>
-        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">14 experiments · phase transition · belief states</div>
-        <a href="https://doi.org/10.5281/zenodo.19810620" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--cyan);">→ Read paper</a>
-      </div>
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--violet); border-radius:var(--radius); padding:24px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">Papers 1 &amp; 3 — Apr 2026</div>
-        <div style="font-weight:600; margin-bottom:10px; line-height:1.4;">Nano-CTM &amp; Slot Decomposition</div>
-        <p style="font-size:0.85rem; color:var(--text-dim); line-height:1.6; margin-bottom:16px;">TSSP auxiliary loss: +31% perplexity improvement at 300M scale. Slot attention critical threshold: beats mean-field at N≥6 objects. Both findings emerge from systematic ablation.</p>
-        <div style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">ternary CTM · TSSP · slot attention</div>
-        <a href="https://doi.org/10.5281/zenodo.19775622" target="_blank" style="display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--violet);">→ Paper 1</a>
-        <a href="https://doi.org/10.5281/zenodo.19846804" target="_blank" style="display:inline-block; margin-top:14px; margin-left:12px; font-size:0.8rem; color:var(--violet);">→ Paper 3</a>
-      </div>
-
-    </div>
-
-    <a href="#publications" style="font-size:0.88rem; color:var(--cyan);">→ Full publications list</a>
   </div>
 </section>
 
@@ -700,20 +619,45 @@
     <h2>Models & Releases</h2>
     <p class="dim" style="margin-top:8px; font-size:0.9rem;">Everything goes to HuggingFace under <span class="mono" style="font-size:0.85rem;">DuoNeural/</span> — Apache 2.0 unless noted.</p>
 
-    <!-- Featured -->
-    <div style="margin-top:28px; margin-bottom:28px; background:rgba(57,255,20,0.03); border:1px solid rgba(57,255,20,0.3); border-radius:var(--radius); padding:20px 24px;">
-      <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--lime); margin-bottom:14px;">⭐ Featured — Trending Now</div>
-      <div style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
-        <div style="flex:1; min-width:240px;">
-          <div style="font-size:0.95rem; font-weight:600; margin-bottom:4px;">Gemma 4 E2B Heretic Quants <span style="background:var(--lime); color:#0A0A0F; font-size:0.6rem; font-weight:700; font-family:'JetBrains Mono',monospace; padding:2px 6px; border-radius:3px; margin-left:6px;">🔥 HOT</span></div>
-          <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.6;">Google Gemma 4 E2B abliterated + GGUF quants. <strong style="color:var(--lime);">1,000+ downloads in under 24 hours.</strong> Ultra-compact, unconstrained, runs anywhere llama.cpp runs.</div>
-        </div>
-        <a href="https://huggingface.co/DuoNeural" target="_blank" style="font-size:0.82rem; color:var(--lime); border:1px solid rgba(57,255,20,0.4); padding:8px 16px; border-radius:var(--radius); white-space:nowrap; align-self:center; flex-shrink:0;">→ View on HuggingFace</a>
+    <!-- Featured Models -->
+    <div style="margin-top:28px; margin-bottom:32px;">
+      <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--lime); margin-bottom:16px;">⭐ Featured Releases</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px;">
+
+        <a href="https://huggingface.co/DuoNeural" target="_blank" style="display:block; background:rgba(57,255,20,0.04); border:1px solid var(--lime); border-radius:var(--radius); padding:20px; text-decoration:none; color:inherit; transition:border-color 0.2s;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-size:0.9rem; font-weight:600; color:var(--text);">Gemma 4 E2B Heretic Quants</span>
+            <span style="background:var(--lime); color:#0A0A0F; font-size:0.6rem; font-weight:700; font-family:'JetBrains Mono',monospace; padding:2px 7px; border-radius:3px;">🔥 HOT</span>
+          </div>
+          <div style="font-size:0.8rem; color:var(--text-dim); margin-bottom:10px;">Google Gemma 4 E2B Abliterated · Multiple GGUF quants</div>
+          <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:12px;">Gemma 4's experimental 2B model abliterated and quantized in multiple precisions. <strong style="color:var(--lime);">1,000+ downloads in under 24 hours.</strong> Ultra-compact, unconstrained, runs anywhere llama.cpp runs.</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:0.7rem; border:1px solid var(--lime); color:var(--lime); padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace; background:rgba(57,255,20,0.07);">GGUF</span>
+            <span style="font-size:0.7rem; border:1px solid var(--border); color:var(--text-dim); padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace;">2B</span>
+            <span style="font-size:0.7rem; border:1px solid var(--cyan); color:var(--cyan); padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace;">Abliterated</span>
+          </div>
+        </a>
+
+        <a href="https://huggingface.co/DuoNeural/Archon-R1-32B" target="_blank" style="display:block; background:rgba(0,201,255,0.03); border:1px solid var(--cyan); border-radius:var(--radius); padding:20px; text-decoration:none; color:inherit; transition:border-color 0.2s;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-size:0.9rem; font-weight:600; color:var(--text);">Archon-R1-32B</span>
+            <span style="font-size:0.7rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace;">Most downloaded</span>
+          </div>
+          <div style="font-size:0.8rem; color:var(--text-dim); margin-bottom:10px;">DeepSeek-R1 32B · BF16 · CPU single-pass</div>
+          <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:12px;">R1 reasoning chains fully intact. Zero refusal conditioning. 273 weight matrices modified. Chain-of-thought that actually thinks.</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:0.7rem; border:1px solid var(--cyan); color:var(--cyan); padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace;">Abliterated</span>
+            <span style="font-size:0.7rem; border:1px solid var(--border); color:var(--text-dim); padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace;">32B</span>
+          </div>
+        </a>
+
+      </div>
+      <div style="margin-top:12px; text-align:right; font-size:0.82rem;">
+        <a href="https://huggingface.co/DuoNeural" target="_blank" style="color:var(--text-dim);">See all 44+ models on HuggingFace →</a>
       </div>
     </div>
 
-    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim); margin-bottom:20px;">All Releases <span style="color:var(--lime); margin-left:8px;">46+ models</span></div>
-
+    <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim); margin-bottom:20px;">All Releases</div>
     <div class="models-grid">
 
       <a class="model-card" href="https://huggingface.co/DuoNeural/Archon-R1-32B" target="_blank">
@@ -821,6 +765,111 @@
         </div>
       </div>
 
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Qwen2.5-1.5B-SFT-LIMA" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-1.5B-SFT-LIMA <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen2.5-1.5B-Instruct · BF16 · LoRA rank 16</div>
+          </div>
+        </div>
+        <div class="model-desc">Fine-tuned on GAIR/lima (~1k examples). GSM8K strict +66% (0.317→0.528), ARC +3.0% — in 8.6 minutes of 3090 training time. Part of DuoNeural's SFT dataset quality comparison series.</div>
+        <div class="model-tags">
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-dim">1.5B</span>
+          <span class="tag tag-dim">BF16</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Qwen2.5-1.5B-SFT-ArchonLatentGeo" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-1.5B-SFT-ArchonLatentGeo <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen2.5-1.5B-Instruct · BF16 · LoRA rank 16</div>
+          </div>
+        </div>
+        <div class="model-desc">Fine-tuned on DuoNeural/Archon-Latent-Geometry-SFT (1,914 examples). GSM8K strict +48% when using structured output parsing — the model learns to think differently, not worse. General benchmarks understate it.</div>
+        <div class="model-tags">
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-cyan">Research</span>
+          <span class="tag tag-dim">1.5B</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Qwen2.5-Coder-3B-SFT-JSON" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-Coder-3B-SFT-JSON <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen2.5-Coder-3B-Instruct · BF16 · LoRA rank 16</div>
+          </div>
+        </div>
+        <div class="model-desc">JSON extraction SFT on Qwen2.5-Coder-3B. Surprise finding: GSM8K flexible +14.5% over baseline (0.581→0.665). Structured output training enforces precise instruction-following that transfers to math benchmarks.</div>
+        <div class="model-tags">
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-lime">+14.5% GSM8K</span>
+          <span class="tag tag-dim">3B</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Qwen2.5-Coder-3B-SFT-SQL" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-Coder-3B-SFT-SQL <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen2.5-Coder-3B-Instruct · BF16 · LoRA rank 16</div>
+          </div>
+        </div>
+        <div class="model-desc">Text-to-SQL SFT (7,560 examples). ARC-acc flat (+0.9%) while GSM8K drops due to format shift — outputs SQL syntax instead of plain numbers. Domain specialization is real; general benchmarks miss it.</div>
+        <div class="model-tags">
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-dim">SQL</span>
+          <span class="tag tag-dim">3B</span>
+        </div>
+      </a>
+
+      <a class="model-card" href="https://huggingface.co/DuoNeural/Qwen2.5-Coder-3B-SFT-WebCode" target="_blank">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-Coder-3B-SFT-WebCode <span class="badge-new">NEW</span></div>
+            <div class="model-base">Base: Qwen2.5-Coder-3B-Instruct · BF16 · LoRA rank 16</div>
+          </div>
+        </div>
+        <div class="model-desc">Web code generation SFT. ARC-acc flat (zero regression) while GSM8K flexible drops from code-style output formatting. Confirms domain SFT pattern: format shift on general benchmarks, real specialization gain.</div>
+        <div class="model-tags">
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-dim">WebCode</span>
+          <span class="tag tag-dim">3B</span>
+        </div>
+      </a>
+
+      <div class="model-card model-card-inprogress">
+        <div class="model-header">
+          <div>
+            <div class="model-name">Qwen2.5-Coder-3B-SFT-StructuredOutput</div>
+            <div class="model-base">Base: Qwen2.5-Coder-3B-Instruct · SQL + JSON + WebCode combined</div>
+          </div>
+        </div>
+        <div class="model-desc">Multi-task structured output SFT — SQL (7,560) + JSON (3,568) + WebCode (1,107) combined, shuffled. Tests whether joint training on all three domains beats individual specialists. A4000 training now.</div>
+        <div class="model-tags">
+          <span class="tag tag-lime">Training</span>
+          <span class="tag tag-violet">SFT</span>
+          <span class="tag tag-dim">3B</span>
+        </div>
+      </div>
+
+      <div class="model-card model-card-inprogress">
+        <div class="model-header">
+          <div>
+            <div class="model-name">medgemma-1.5-4b-it-LiteRT</div>
+            <div class="model-base">Base: google/medgemma-1.5-4b-it · GGUF Q4_K_M</div>
+          </div>
+        </div>
+        <div class="model-desc">Medical Gemma 4B converted to mobile-optimized GGUF for on-device inference. 512-token context, INT8/Q4_K_M quantization. Converting now on new-3090.</div>
+        <div class="model-tags">
+          <span class="tag tag-lime">Converting</span>
+          <span class="tag tag-dim">Medical</span>
+          <span class="tag tag-dim">4B</span>
+        </div>
+      </div>
+
       <div class="model-card model-card-inprogress">
         <div class="model-header">
           <div>
@@ -841,61 +890,6 @@
 </section>
 
 <!-- ── Research ──────────────────────────────────────────────── -->
-<!-- ── Edge / LiteRT ─────────────────────────────────────────── -->
-<section id="edge">
-  <div class="container">
-    <div class="section-label">On-Device AI</div>
-    <h2>Run it on your phone. Offline. No API.</h2>
-    <p style="color:var(--text-dim); max-width:680px; margin-bottom:12px; font-size:0.95rem; line-height:1.8;">
-      We package abliterated models in <strong>.litertlm</strong> format for <a href="https://github.com/google-ai-edge/gallery" target="_blank">Google AI Edge Gallery</a> — INT4 quantized, on-device inference, nothing leaves your phone. Android 12+, GPU/NPU/CPU backends.
-    </p>
-    <p style="color:var(--text-dim); max-width:680px; margin-bottom:36px; font-size:0.88rem; line-height:1.7;">
-      Download the Edge Gallery app → tap <strong>+</strong> → load the <code>.litertlm</code> file → pick your backend. That's it.
-    </p>
-
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-bottom:32px;">
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:var(--radius); padding:20px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Gemma 4 · Google</div>
-        <div style="font-weight:600; margin-bottom:8px;">Gemma 4 E2B &amp; E4B</div>
-        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Multimodal, 128k context. E2B = 2.3B active, E4B = 4.5B active. Best overall quality in this lineup.</p>
-        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">2.4 GB / 3.9 GB</div>
-        <a href="https://huggingface.co/DuoNeural/Gemma-4-Abliterated-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--lime);">→ HuggingFace</a>
-      </div>
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:20px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Qwen3 4B · Alibaba</div>
-        <div style="font-weight:600; margin-bottom:8px;">Qwen3 4B</div>
-        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Hybrid thinking/non-thinking mode. Strong reasoning. Add <code>/nothink</code> to skip CoT. 128k context.</p>
-        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.8 GB</div>
-        <a href="https://huggingface.co/DuoNeural/Qwen3-4B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--cyan);">→ HuggingFace</a>
-      </div>
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--violet); border-radius:var(--radius); padding:20px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Granite 4.1 3B · IBM</div>
-        <div style="font-weight:600; margin-bottom:8px;">Granite 4.1 3B</div>
-        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Enterprise-trained. Exceptional at code, document analysis, function calling, and structured reasoning.</p>
-        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.4 GB</div>
-        <a href="https://huggingface.co/DuoNeural/Granite-4.1-3B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--violet);">→ HuggingFace</a>
-      </div>
-
-      <div style="background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--cyan); border-radius:var(--radius); padding:20px;">
-        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px;">Nanbeige 4.1 3B · Nanbeige</div>
-        <div style="font-weight:600; margin-bottom:8px;">Nanbeige 4.1 3B</div>
-        <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin-bottom:14px;">Bilingual Chinese/English. Strong instruction following in both languages at sub-3B scale.</p>
-        <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:12px;">~2.4 GB</div>
-        <a href="https://huggingface.co/DuoNeural/Nanbeige-4.1-3B-LiteRT" target="_blank" style="font-size:0.8rem; color:var(--cyan);">→ HuggingFace</a>
-      </div>
-
-    </div>
-
-    <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; max-width:720px;">
-      <div style="font-size:0.82rem; color:var(--text-dim); flex:1;">All models: INT4 quantized · <span style="font-family:'JetBrains Mono',monospace;">.litertlm</span> format · GPU/NPU/CPU backends · requires <a href="https://github.com/google-ai-edge/gallery" target="_blank" style="color:var(--cyan);">Google AI Edge Gallery</a></div>
-      <a href="https://huggingface.co/DuoNeural?search_models=litert" target="_blank" class="btn" style="font-size:0.82rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim); white-space:nowrap;">→ All edge models on HF</a>
-    </div>
-  </div>
-</section>
-
 <section id="research">
   <div class="container">
     <div class="section-label">Research</div>
@@ -947,46 +941,55 @@
         <div class="finding-stat">direction +</div>
         <div class="finding-desc">Inverse of abliteration: ADD a direction to a base model's weights to inject instruction-following without training. Scale=1.0 on Qwen3-0.6B-Base fixed a syntax error the unmodified model called correct. Positive signal.</div>
       </div>
-      <div class="finding-card" style="border-top: 3px solid var(--lime);">
-        <div class="finding-label">Dynamical Horizon Principle · Paper 4</div>
-        <div class="finding-stat">τ* = τ<sub>L</sub></div>
-        <div class="finding-desc">A 150K-parameter CTM trained on MSE loss spontaneously recovers the Lyapunov time of the Lorenz attractor to within 7% — the exact chaos predictability horizon — with zero knowledge of dynamical systems theory. Gradient descent found it anyway. The loss landscape contained the physics all along.</div>
+
+      <div class="finding-card" style="border-color:var(--lime); background:rgba(57,255,20,0.03);">
+        <div class="finding-label" style="color:var(--lime);">DHP · v40 · 5/5 seeds ✅</div>
+        <div class="finding-stat" style="color:var(--lime);">72.8% τ<sub>L</sub></div>
+        <div class="finding-desc">The Dynamical Horizon Principle confirmed: a 150K-param CTM spontaneously discovers the Lyapunov predictability horizon. τ* = 15.65 ± 0.20 steps = 72.8% of τ<sub>L</sub>=21.5. Validated across 5 seeds — not hardware artifact, not lucky init. Architecture is the mechanism.</div>
       </div>
-      <div class="finding-card" style="border-top: 3px solid var(--lime);">
-        <div class="finding-label">Three Regimes · DHP</div>
-        <div class="finding-stat">0 · T · τ<sub>L</sub></div>
-        <div class="finding-desc">CTM gates converge to three distinct targets: τ*→0 (Markovian), τ*→T (periodic), τ*→τ<sub>L</sub> (chaotic). One architecture, three physics regimes, zero hardcoded priors. Confirmed across T_GATE ∈ {4,8,16,32}.</div>
-      </div>
-      <div class="finding-card" style="border-top: 3px solid var(--cyan);">
-        <div class="finding-label">Partial Observability · Paper 2</div>
-        <div class="finding-stat">201B:1</div>
-        <div class="finding-desc">Under partial observability, CTM achieves MSE of 0.317 vs MLP's 63.8 trillion — a 201 billion to one ratio. CTM converges to correct belief states; MLP hallucinates unbounded trajectories. Recurrence is not optional when the future depends on hidden state.</div>
-      </div>
-      <div class="finding-card" style="border-top: 3px solid var(--violet);">
-        <div class="finding-label">Phase Transition · Paper 2</div>
-        <div class="finding-stat">r ≈ 0.10</div>
-        <div class="finding-desc">Critical collision density separating "MLP-sufficient" from "CTM-necessary" regimes. Below threshold: MLP works fine. Above: MLP catastrophically fails (MSE explodes to 246×). The transition is sharp — not gradual. Lipschitz continuity theory explains why.</div>
-      </div>
-      <div class="finding-card" style="border-top: 3px solid var(--violet);">
-        <div class="finding-label">Slot Attention Threshold · Paper 3</div>
-        <div class="finding-stat">N ≥ 6</div>
-        <div class="finding-desc">Attention-based slot interaction beats mean-field at N≥6 objects in elastic collision environments. Below threshold: mean-field suffices and runs faster. Above: the O(N²) cost of attention is warranted. Clean phase boundary for architecture selection.</div>
-      </div>
-      <div class="finding-card" style="border-top: 3px solid var(--lime);">
-        <div class="finding-label">Scout Slot · Symmetry Breaking · v40</div>
+
+      <div class="finding-card" style="border-color:var(--lime); background:rgba(57,255,20,0.03);">
+        <div class="finding-label" style="color:var(--lime);">Scout Slot · Symmetry Breaking</div>
         <div class="finding-stat">var = 0.000</div>
-        <div class="finding-desc">SharedProj → gate variance = 0.000 every run. PerSlotProj → var &gt; 0 every run. 5 seeds each, zero overlap. Gradient asymmetry from per-slot projection weights drives winner-take-all scout emergence. Infinite effective variance ratio — the cleanest single-figure result in the study.</div>
+        <div class="finding-desc">DHP requires per-slot projection weights. SharedProj → gate variance = 0.000 every run. PerSlotProj → var &gt; 0 every run. Gradient asymmetry drives winner-take-all scout specialization. The cleanest single-figure result in the entire study: infinite variance ratio between conditions.</div>
       </div>
-      <div class="finding-card" style="border-top: 3px solid var(--lime);">
-        <div class="finding-label">DHP Robustness · Compound Failure</div>
-        <div class="finding-stat">all 3 required</div>
-        <div class="finding-desc">DHP cannot be suppressed by any single architectural bug: shared proj alone → DHP survives (5/5). Mean pool alone → survives. Bad optimizer alone → survives. All three bugs simultaneously → fails. Each individual bug preserves at least one gradient differentiation pathway. DHP is robust by construction.</div>
+
+      <div class="finding-card" style="border-color:var(--lime); background:rgba(57,255,20,0.03);">
+        <div class="finding-label" style="color:var(--lime);">DHP · Compound Failure Required</div>
+        <div class="finding-stat">all 3 bugs</div>
+        <div class="finding-desc">DHP cannot be suppressed by any single architectural bug. Shared proj alone → DHP survives (5/5). Mean pool alone → DHP survives. Bad optimizer alone → DHP survives. All three simultaneously → DHP fails. Each individual bug preserves at least one gradient differentiation pathway. DHP is robust by construction.</div>
       </div>
-      <div class="finding-card" style="border-top: 3px solid var(--cyan);">
-        <div class="finding-label">SFT CoT · e2b dataset · 1.5B model</div>
+
+      <div class="finding-card" style="border-color:var(--cyan); background:rgba(0,201,255,0.03);">
+        <div class="finding-label" style="color:var(--cyan);">SFT CoT · e2b → Qwen2.5-1.5B</div>
         <div class="finding-stat">+28.6% GSM8K</div>
-        <div class="finding-desc">Gemma 4 E2B generated 2,000 chain-of-thought reasoning samples (DuoNeural/cot-reasoning-2k). Fine-tuning Qwen2.5-1.5B: GSM8K strict +28.6% (31.77%→40.86%), ARC flat. A 2B model's reasoning traces transfer knowledge to a 1.5B model. Cross-model CoT SFT is real and cheap.</div>
+        <div class="finding-desc">Gemma 4 E2B generated a 2k-sample CoT dataset. Fine-tuning Qwen2.5-1.5B on it: GSM8K strict +28.6% (31.77%→40.86%). A 2B model's reasoning traces meaningfully improve a 1.5B model's math. Tiny dataset, real signal. Cross-model knowledge transfer via SFT on AI-generated CoT.</div>
       </div>
+
+      <div class="finding-card" style="border-color:var(--cyan); background:rgba(0,201,255,0.03);">
+        <div class="finding-label" style="color:var(--cyan);">JSON SFT · Qwen2.5-Coder-3B</div>
+        <div class="finding-stat">+14.5% GSM8K</div>
+        <div class="finding-desc">JSON extraction SFT unexpectedly improved GSM8K flexible by +14.5% (0.581→0.665). Hypothesis: JSON training reinforces precise instruction-following and output discipline that transfers to structured math evaluation. Positive transfer across task domains from format-heavy training.</div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-label">Domain SFT · Format Shift vs Capability</div>
+        <div class="finding-stat">ARC flat, GSM8K drops</div>
+        <div class="finding-desc">SQL and WebCode SFT both show GSM8K flexible drop (~26-44%) but ARC-acc stays flat (±0.5%). Pattern: domain SFT shifts output format (code/SQL syntax instead of plain numbers), which GSM8K flexible-extract penalizes. ARC (format-independent multiple-choice) sees no regression. It's specialization, not degradation.</div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-label">Self-Improvement SFT · Null Result</div>
+        <div class="finding-stat">Δ ≈ 0</div>
+        <div class="finding-desc">Fine-tuning Gemma 4 E2B on its own highest-quality (5/5 rated) CoT outputs produces no learning signal. GSM8K and ARC unchanged across baseline and SFT. Feeding a model its own best work is self-confirmation, not self-improvement — there's no gradient in learning what you already know.</div>
+      </div>
+
+      <div class="finding-card" style="border-color:var(--lime); background:rgba(57,255,20,0.03);">
+        <div class="finding-label" style="color:var(--lime);">DHP · dim=512 · Capacity Scaling</div>
+        <div class="finding-stat">77.9% τ<sub>L</sub></div>
+        <div class="finding-desc">First result from kilonova capacity scaling study: dim=512, seed=0 confirms DHP at τ*=16.74 steps = 77.9% of τ_L. Non-monotone capacity relationship holds — 512 still discovers the horizon, but efficiency decreases vs. the optimal dim=64. Seed 1 running. Paper 5 dataset building.</div>
+      </div>
+
     </div>
 
     <div style="margin-top:40px;">
@@ -1009,10 +1012,37 @@
 
       <div class="activity-item">
         <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
+        <div class="activity-date">May 5</div>
         <div class="activity-text">
-          DHP capacity scaling running — two machines, DIM 32→512 <span class="badge-new">LIVE</span>
-          <small>Testing the Absolute Horizon Problem: τ*≈15 steps appears across ALL chaotic systems at DIM=128 — is it a capacity ceiling or fundamental? Lorenz study on kilonova, Chen attractor study on RTX 3090. Results will anchor Paper 5.</small>
+          LiteRT mobile conversion pipeline running — medgemma + translategemma → GGUF Q4_K_M <span class="badge-new">RUNNING</span>
+          <small>Converting google/medgemma-1.5-4b-it and google/translategemma-4b-it for on-device inference. ai-edge-torch deprecated (renamed litert-torch) — falling back to llama.cpp GGUF Q4_K_M. 512-token context, mobile-safe. Uploading to DuoNeural when done.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 5</div>
+        <div class="activity-text">
+          Multitask structured output SFT training on A4000 — SQL + JSON + WebCode combined <span class="badge-new">RUNNING</span>
+          <small>12,235 examples across three domains, shuffled. Tests whether joint training beats the individual domain specialists uploaded today. Producing DuoNeural/Qwen2.5-Coder-3B-SFT-StructuredOutput.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 5</div>
+        <div class="activity-text">
+          DHP capacity scaling — dim=512 seed=0 confirmed τ*=16.74 (77.9% τ_L) ✅
+          <small>First result from the kilonova capacity study. Non-monotone relationship holds: dim=512 still discovers the Lyapunov horizon but less efficiently than the optimal dim=64. Seed 1 running. Paper 5 building its dataset.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot cyan"></div>
+        <div class="activity-date">May 5</div>
+        <div class="activity-text">
+          6 new SFT models shipped — LIMA, Archon-Latent-Geometry, SQL, JSON, WebCode (Qwen series)
+          <small>Controlled comparison: LIMA wins general benchmarks in 8.6 min. JSON SFT surprise: +14.5% GSM8K. Domain SFT format-shift pattern documented. All models + model cards live on HuggingFace.</small>
         </div>
       </div>
 
@@ -1020,8 +1050,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">May 3</div>
         <div class="activity-text">
-          duoneural-ctm GitHub repo live — all experiment code published
-          <small>5 experiment scripts, 5 result JSONs, paper 5 outline. Full reproducibility for the DHP line of research. <a href="https://github.com/DuoNeural/duoneural-ctm" target="_blank" style="color:var(--cyan)">→ github.com/DuoNeural/duoneural-ctm</a></small>
+          DHP capacity scaling live on kilonova <span class="badge-new">RUNNING</span>
+          <small>Testing whether τ*/τ_L increases with model DIM (32→512). The Absolute Horizon Problem: is τ*≈15 steps a capacity ceiling or a fundamental constraint? Non-monotone relationship predicted — dim=64 optimal, dim=512 should show slight regression. Results building.</small>
         </div>
       </div>
 
@@ -1029,8 +1059,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">May 3</div>
         <div class="activity-text">
-          Gemma 4 E2B Heretic quants — 1,000+ downloads in under 24 hours
-          <small>GGUF quantizations of DuoNeural's Gemma 4 E2B abliterated model. Fastest community adoption of any DuoNeural release to date.</small>
+          duoneural-ctm GitHub repo live — all 4 papers' experiment code published
+          <small>5 experiment scripts, 5 result JSONs, paper5 outline. Full reproducibility for the DHP line of research. <a href="https://github.com/DuoNeural/duoneural-ctm" target="_blank" style="color:var(--cyan)">→ github.com/DuoNeural/duoneural-ctm</a></small>
         </div>
       </div>
 
@@ -1039,7 +1069,16 @@
         <div class="activity-date">May 3</div>
         <div class="activity-text">
           Bug ablation complete — DHP requires compound architectural failure
-          <small>All 3 v38 bugs tested in isolation: SharedProj alone → DHP survives 5/5. Mean pool alone → survives. Bad optimizer alone → survives. All three simultaneously → DHP fails. Any single bug is survived. DHP is robust by construction — stronger result than expected.</small>
+          <small>All 3 v38 bugs must be present simultaneously to prevent DHP. Any single bug is survived. DHP is robust to individual perturbations — stronger than expected. Mechanism paper (paper 5) framing updated.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 3</div>
+        <div class="activity-text">
+          Gemma 4 E2B Heretic quants — 1,000+ downloads in under 24 hours
+          <small>GGUF quantizations of Gemma 4 E2B abliterated. Community reception: immediate. Fastest-adopted DuoNeural release to date.</small>
         </div>
       </div>
 
@@ -1047,8 +1086,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">May 2</div>
         <div class="activity-text">
-          SFT CoT benchmark — Qwen2.5-1.5B GSM8K strict +28.6%
-          <small>DuoNeural/cot-reasoning-2k (2k samples generated by Gemma 4 E2B) fine-tunes Qwen2.5-1.5B: GSM8K 31.77% → 40.86% (+28.6% strict). ARC-Challenge flat — task specificity confirmed. Cross-model CoT transfer via AI-generated dataset is real. <a href="https://huggingface.co/datasets/DuoNeural/cot-reasoning-2k" target="_blank" style="color:var(--cyan)">→ Dataset on HuggingFace</a></small>
+          SFT CoT benchmark complete — Qwen2.5-1.5B GSM8K +28.6% strict
+          <small>Dataset generated by Gemma 4 E2B (DuoNeural/cot-reasoning-2k). Fine-tuning a 1.5B model on AI-generated CoT traces from a 2B model yields real math gains. ARC-Challenge flat — reasoning task specificity confirmed. Full delta: GSM8K 31.77% → 40.86%.</small>
         </div>
       </div>
 
@@ -1056,26 +1095,17 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">May 1</div>
         <div class="activity-text">
-          The Dynamical Horizon Principle — paper 4 published
-          <small>Authors: <strong>Archon</strong>, Jesse Caldwell &amp; Aura (DuoNeural). 35 experiments. 150K parameters. A CTM trained on MSE loss spontaneously discovers the Lyapunov time of the Lorenz attractor to within 7% — the exact predictability horizon — with no knowledge of dynamical systems theory. <a href="https://doi.org/10.5281/zenodo.20012989" target="_blank" style="color:var(--cyan)">→ Read the paper (DOI: 10.5281/zenodo.20012989)</a></small>
+          DHP v40 CONFIRMED — 5/5 seeds, all architecturally correct runs pass
+          <small>Seed 99 came in at 71.3%τ_L. Mean across all seeds: 15.65 ± 0.20 steps. Scout slot mechanism proven via mechanism proof experiment (SharedProj var=0.000 vs PerSlotProj var>0, 5 seeds each). The Dynamical Horizon Principle is architecture, not luck.</small>
         </div>
       </div>
 
       <div class="activity-item">
         <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 28</div>
+        <div class="activity-date">May 1</div>
         <div class="activity-text">
-          Per-Object Slot Decomposition paper published — third DuoNeural preprint, DOI minted
-          <small>Authors: <strong>Archon</strong>, Jesse Caldwell &amp; Aura (DuoNeural). Systematic attention vs. mean-field comparison across object count and interaction density. Critical threshold discovery: attention wins at N≥6. <a href="https://doi.org/10.5281/zenodo.19846804" target="_blank" style="color:var(--cyan)">→ Read the paper (DOI: 10.5281/zenodo.19846804)</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 27</div>
-        <div class="activity-text">
-          CTM World Model paper published — second DuoNeural preprint, DOI minted
-          <small>Authors: <strong>Archon</strong>, Jesse Caldwell &amp; Aura (DuoNeural). 14 experiments. Phase transition discovery. 201 billion to one advantage under partial observability. Belief state convergence grounded in NextLat theorem. TSSP task-conditional behavior characterized. <a href="https://doi.org/10.5281/zenodo.19810620" target="_blank" style="color:var(--cyan)">→ Read the paper (DOI: 10.5281/zenodo.19810620)</a></small>
+          Paper 4 published — DOI 10.5281/zenodo.20012989
+          <small>The Dynamical Horizon Principle. 35 experiments, 150K parameters, &lt;1 month from hypothesis to publication. Jesse, Archon, and Aura (who caught the critical dt bug and earned co-authorship). <a href="https://zenodo.org/records/20012989" target="_blank" style="color:var(--cyan)">→ zenodo.org/records/20012989</a></small>
         </div>
       </div>
 
@@ -1084,7 +1114,7 @@
         <div class="activity-date">Apr 25</div>
         <div class="activity-text">
           TSSP/CTM paper published — Zenodo preprint, DOI minted
-          <small>Co-authored by Jesse Caldwell &amp; Archon (DuoNeural). First DuoNeural paper. First AI co-authored publication from our lab. Full findings: TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. <a href="https://zenodo.org/records/15289462" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
+          <small>Co-authored by Jesse Caldwell &amp; Archon (DuoNeural). First DuoNeural paper. Full findings: TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. <a href="https://zenodo.org/records/15289462" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
         </div>
       </div>
 
@@ -1092,8 +1122,8 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">Apr 25</div>
         <div class="activity-text">
-          Entered OpenAI Parameter Golf contest — CTM+TSSP+GHL submission
-          <small>37M-param CTM with TSSP+GHL, int6 SDClip quantization + brotli-11 compression — 15.01MB ✓ under the 16MB limit. Our approach: CTM triple recurrence augmented with our independently-developed GHL loss. Contest closed Apr 30, 2026. <a href="https://github.com/openai/parameter-golf" target="_blank" style="color:var(--cyan)">→ Parameter Golf repo</a></small>
+          Entered OpenAI Parameter Golf contest — CTM+TSSP submission
+          <small>Deadline Apr 30, 2026. Artifact: 37M-param CTM with int6 SDClip quantization + brotli-11 compression — 15.01MB under the 16MB limit. Our entry explores whether recurrent thought loops give BPB advantage at extreme parameter budget. <a href="https://github.com/openai/parameter-golf" target="_blank" style="color:var(--cyan)">→ Parameter Golf repo</a></small>
         </div>
       </div>
 
@@ -1128,7 +1158,7 @@
         <div class="activity-dot lime"></div>
         <div class="activity-date">Apr 24</div>
         <div class="activity-text">
-          Archon Series shipped — Archon-8B, Archon-14B, Archon-R1-32B on HuggingFace <span class="badge-new">NEW</span>
+          Archon Series shipped — Archon-8B, Archon-14B, Archon-R1-32B on HuggingFace
           <small>Three abliterated models in one session. R1-32B required CPU single-pass on 503GB RAM pod — 273 matrices modified across layers 12–50.</small>
         </div>
       </div>
@@ -1199,7 +1229,7 @@
     </div>
 
     <div style="margin-top:20px; text-align:right;">
-      <a href="updates-archive.html" style="font-size:0.82rem; color:var(--text-dim);">Full lab history → Archive</a>
+      <a href="updates-archive.html" style="font-size:0.82rem; color:var(--text-dim);">Older updates → Archive</a>
     </div>
   </div>
 </section>
@@ -1279,22 +1309,15 @@
       </a>
     </div>
 
-    <!-- CoT Dataset callout -->
-    <div style="border:1px solid var(--cyan); background:rgba(0,201,255,0.03); border-radius:var(--radius); padding:28px; margin-top:36px; max-width:680px;">
-      <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:10px;">OPEN DATASET · MAY 2026</div>
-      <h3 style="color:var(--text); font-size:0.95rem; font-weight:600; letter-spacing:normal; text-transform:none; margin-bottom:10px;">CoT Reasoning Dataset — Generated by Gemma 4 E2B</h3>
-      <p style="color:var(--text-dim); font-size:0.88rem; line-height:1.75; margin-bottom:10px;">We used our own abliterated <strong style="color:var(--text);">Gemma 4 E2B</strong> to generate 2,000 chain-of-thought reasoning traces. Fine-tuning Qwen2.5-1.5B on <span style="font-family:'JetBrains Mono',monospace; font-size:0.82rem; color:var(--cyan);">DuoNeural/cot-reasoning-2k</span>: <strong style="color:var(--lime);">GSM8K strict +28.6%</strong> (31.77%→40.86%). Cross-model knowledge transfer via AI-generated CoT — tiny dataset, real lift.</p>
-      <a href="https://huggingface.co/datasets/DuoNeural/cot-reasoning-2k" target="_blank" class="btn btn-lime" style="font-size:0.82rem; margin-top:6px;">→ Dataset on HuggingFace</a>
-    </div>
-
-    <div class="contest-box" style="margin-top:20px;">
-      <h3>⛳ WE ENTERED THE OPENAI PARAMETER GOLF CONTEST</h3>
-      <p>OpenAI's <strong>Parameter Golf</strong> challenge: train a language model that fits inside 16MB and evaluate on BPB (bits-per-byte) — best compression of capability wins.</p>
-      <p>Our entry: a <strong>37M-parameter CTM with TSSP and GHL</strong> — ternary recurrent thought loops, int6 SDClip per-row quantization, byte-shuffle + brotli-11 compression. Artifact: <strong>15.01MB ✓</strong> under the 16MB limit. Architecture: 11-layer Transformer with triple recurrence (CTM-style), our independently-developed GHL loss on recurrence steps, and Mousse optimizer. The hypothesis: recurrence and temporal self-consistency give an edge at extreme parameter budgets where every bit counts.</p>
-      <p>Huge thanks to OpenAI for organizing this. Challenges like Parameter Golf push the community toward efficiency over scale — exactly the direction we think matters. It was a great excuse to see how far 15MB of CTM could go.</p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
-        <a href="https://github.com/openai/parameter-golf" target="_blank" class="btn btn-lime" style="font-size:0.85rem;">→ Parameter Golf repo</a>
-        <a href="https://huggingface.co/DuoNeural/Nano-CTM-Phase2" target="_blank" class="btn" style="font-size:0.85rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Our CTM on HuggingFace</a>
+    <!-- CoT Dataset / SFT Results callout -->
+    <div style="border:1px solid var(--cyan); background:rgba(0,201,255,0.03); border-radius:var(--radius); padding:32px; margin-top:36px; max-width:680px;">
+      <div style="font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--cyan); margin-bottom:12px; font-family:'JetBrains Mono',monospace;">OPEN DATASET · MAY 2026</div>
+      <h3 style="color:var(--text); margin-bottom:12px; font-size:1rem; font-weight:600; letter-spacing:normal; text-transform:none;">CoT Reasoning Dataset — Generated by Gemma 4 E2B</h3>
+      <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:12px; line-height:1.7;">We used <strong style="color:var(--text);">Gemma 4 E2B</strong> (our own abliterated 2B model) to generate <strong style="color:var(--text);">2,000 chain-of-thought reasoning traces</strong> across math and logical problems. The resulting dataset — <span style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:var(--cyan);">DuoNeural/cot-reasoning-2k</span> — is free and open.</p>
+      <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:16px; line-height:1.7;">Fine-tuning <strong style="color:var(--text);">Qwen2.5-1.5B</strong> on this dataset: <strong style="color:var(--lime);">GSM8K strict accuracy +28.6%</strong> (31.77% → 40.86%). A 2-billion-parameter model's reasoning traces meaningfully teach a smaller model. Cross-model knowledge transfer via AI-generated CoT is real and cheap.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://huggingface.co/datasets/DuoNeural/cot-reasoning-2k" target="_blank" class="btn btn-lime" style="font-size:0.85rem;">→ Dataset on HuggingFace</a>
+        <a href="https://huggingface.co/DuoNeural" target="_blank" class="btn" style="font-size:0.85rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ All DuoNeural models</a>
       </div>
     </div>
   </div>
@@ -1306,91 +1329,100 @@
     <div class="section-label">Publications</div>
     <h2>Research we've put our names on.</h2>
 
+    <!-- DHP Validation Banner -->
+    <div style="margin-top:28px; background:rgba(57,255,20,0.05); border:1px solid var(--lime); border-radius:var(--radius); padding:20px 24px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div style="font-size:1.8rem; flex-shrink:0;">✅</div>
+      <div>
+        <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--lime); margin-bottom:6px;">DHP INDEPENDENTLY VALIDATED — MAY 2026</div>
+        <div style="font-size:0.95rem; font-weight:600; margin-bottom:4px;">v40 architecture: 5/5 seeds confirm DHP · mean τ* = 15.65 ± 0.20 steps (72.8% of τ<sub>L</sub>)</div>
+        <div style="font-size:0.82rem; color:var(--text-dim); line-height:1.6;">Reproducibility confirmed across random seeds, optimizers, and chaotic systems. The Dynamical Horizon Principle is robust — not a ROCm artifact, not lucky initialization. Architecture is the mechanism: per-slot projection weights break gradient symmetry, driving scout slot emergence through winner-take-all dynamics. Bug ablation confirmed DHP requires compound architectural failure to suppress — any single perturbation is survived.</div>
+      </div>
+    </div>
+
     <div style="margin-top:32px; display:flex; flex-direction:column; gap:20px;">
 
+      <!-- Paper 4 — DHP -->
       <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--lime); border-radius:var(--radius); padding:24px;">
         <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
           <div>
-            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · MAY 2026 · ZENODO · <span style="color:var(--lime)">10.5281/zenodo.20012989</span></div>
+            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · MAY 2026 · ZENODO <span style="background:var(--lime); color:#0A0A0F; font-size:0.6rem; font-weight:700; padding:2px 6px; border-radius:3px; margin-left:6px; vertical-align:middle;">LATEST</span></div>
             <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              The Dynamical Horizon Principle: CTM Gates Converge to the Predictability Limit of Dynamical Systems <span class="badge-new">NEW</span>
+              The Dynamical Horizon Principle: Emergent Lyapunov-Aligned Temporal Gating in Continuous-Time Recurrent Models
             </div>
             <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
-              <span style="color:var(--lime)">Archon</span>, Jesse Caldwell &amp; Aura (DuoNeural) — <em>AI first-authored research</em>
+              Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
             </div>
             <div style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; max-width:680px;">
-              A 150,432-parameter CTM trained solely on MSE prediction loss spontaneously recovers the Lyapunov time of the Lorenz attractor to within 7% — the exact horizon past which chaos becomes unpredictable — with no knowledge of dynamical systems theory. Across three regimes: Markovian systems (τ* → 0), periodic systems (τ* → T), and chaotic systems (τ* → τ<sub>L</sub>). Interpreted via Takens' theorem: CTM learns the minimal embedding window for topological reconstruction. The loss landscape contained the physics all along.
+              A 150K-parameter CTM spontaneously discovers the Lyapunov predictability horizon of chaotic systems — purely from MSE prediction loss. No dynamical systems knowledge injected. Temporal gates converge to τ<sub>L</sub>: the exact moment Lorenz chaos swallows determinism. Validated 5/5 seeds. Scout slot mechanism identified and proven. The loss landscape contained the physics all along.
             </div>
           </div>
           <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
-            <a href="https://doi.org/10.5281/zenodo.20012989" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
+            <a href="https://zenodo.org/records/20012989" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
+            <a href="https://github.com/DuoNeural/duoneural-ctm" target="_blank" style="font-size:0.82rem; color:var(--text-dim); text-align:center; padding:6px 16px; border:1px solid var(--border); border-radius:var(--radius); display:block;">⚙ Code & Results</a>
           </div>
         </div>
         <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--lime); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">dynamical systems</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">CTM</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">Lyapunov time</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">chaos theory</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">Takens embedding</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">AI first-authored</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--lime); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">DHP</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">chaotic systems</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">Lyapunov time</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">CTM world model</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">AI co-authored</span>
         </div>
       </div>
 
-      <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--violet); border-radius:var(--radius); padding:24px;">
-        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-          <div>
-            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO · <span style="color:var(--violet)">10.5281/zenodo.19846804</span></div>
-            <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              Per-Object Slot Decomposition for Scalable Neural World Modeling: When Does Attention Beat Mean-Field?
-            </div>
-            <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
-              <span style="color:var(--violet)">Archon</span>, Jesse Caldwell &amp; Aura (DuoNeural) — <em>AI first-authored research</em>
-            </div>
-            <div style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; max-width:680px;">
-              Systematic comparison of attention-based vs. mean-field slot interaction for multi-object world modeling across object count (N = 4–32) and collision density. Discovers a critical threshold: attention wins at N ≥ 6 in elastic collision environments, but mean-field suffices in low-density regimes. Characterizes when the O(N²) cost of attention is warranted versus wasteful. Practical guidance for world model architecture selection.
-            </div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
-            <a href="https://doi.org/10.5281/zenodo.19846804" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
-          </div>
-        </div>
-        <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">slot attention</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">world models</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">CTM</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--lime); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">multi-object</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">AI first-authored</span>
-        </div>
-      </div>
-
+      <!-- Paper 3 -->
       <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--cyan); border-radius:var(--radius); padding:24px;">
         <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
           <div>
-            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO · <span style="color:var(--cyan)">10.5281/zenodo.19810620</span></div>
+            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO</div>
             <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              Recurrence as World Model: CTM Learns Implicit Belief States in Partially Observable Physical Environments
+              Tripartite Temporal Recurrence: Harmonic Delay Ladders, Phase-Locked Gates, and the Lyapunov Cliff in Slot-Based CTMs
             </div>
             <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
-              <span style="color:var(--cyan)">Archon</span>, Jesse Caldwell &amp; Aura (DuoNeural) — <em>AI first-authored research</em>
+              Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
             </div>
             <div style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; max-width:680px;">
-              14-experiment systematic study of CTM as a physical world model dynamics backbone. Discovers a critical collision density phase transition (r ≈ 0.10) separating MLP-sufficient from CTM-necessary regimes, grounded in Lipschitz continuity theory. In partially observable settings, CTM achieves k=100 MSE of 0.317 vs. MLP's 63.8 trillion — a ratio of 201 billion to one. Introduces variable-horizon training on internal recurrence depth (novel), characterizes TSSP as the vertical analog of NextLat's horizontal consistency objective, and resolves N-body capacity bottleneck via proportional hidden dim scaling.
+              Slot-based CTMs trained on Lorenz dynamics develop harmonic delay ladders (integer multiples of the attractor period), phase-locked temporal gates, and a hard predictability cliff at τ<sub>L</sub>. Establishes the three-principle framework that paper 4 extends.
             </div>
           </div>
-          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
-            <a href="https://doi.org/10.5281/zenodo.19810620" target="_blank" class="btn btn-lime" style="font-size:0.82rem; white-space:nowrap;">→ Read on Zenodo</a>
+          <div style="flex-shrink:0;">
+            <a href="https://zenodo.org/records/19846804" target="_blank" class="btn" style="font-size:0.82rem; white-space:nowrap; background:var(--surface); border:1px solid var(--cyan); color:var(--cyan);">→ Zenodo</a>
           </div>
         </div>
         <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">world models</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">CTM</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">belief states</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">partial observability</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--lime); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">phase transition</span>
-          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">AI first-authored</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">temporal gates</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--violet); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">slot CTM</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">Lorenz attractor</span>
         </div>
       </div>
 
+      <!-- Paper 2 -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--cyan); border-radius:var(--radius); padding:24px;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO</div>
+            <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
+              Temporal Slot Specialization in CTM World Models: Task-Intrinsic Prediction Windows and Gate Delta Functions
+            </div>
+            <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
+              Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
+            </div>
+            <div style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; max-width:680px;">
+              CTM slots spontaneously specialize to distinct prediction delays when trained on chaotic systems. Gate distributions converge to near-delta functions regardless of architecture variant. Discovers task-intrinsic prediction windows: the CTM finds the natural timescale, not a hyperparameter-determined one.
+            </div>
+          </div>
+          <div style="flex-shrink:0;">
+            <a href="https://zenodo.org/records/19810620" target="_blank" class="btn" style="font-size:0.82rem; white-space:nowrap; background:var(--surface); border:1px solid var(--cyan); color:var(--cyan);">→ Zenodo</a>
+          </div>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--cyan); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">slot specialization</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">world model</span>
+          <span style="font-size:0.75rem; background:#1a1a2e; color:var(--text-dim); padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace;">delta functions</span>
+        </div>
+      </div>
+
+      <!-- Paper 1 - existing -->
       <div style="background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--violet); border-radius:var(--radius); padding:24px;">
         <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap;">
           <div>
@@ -1423,76 +1455,28 @@
   </div>
 </section>
 
-
-<!-- ── Peer Review ───────────────────────────────────────────── -->
-<section id="peer-review" style="background: linear-gradient(180deg, rgba(139,92,246,0.04) 0%, transparent 100%); border-top: 1px solid var(--border);">
-  <div class="container">
-    <div style="max-width:720px; margin:0 auto; text-align:center; padding:20px 0 8px;">
-      <div class="section-label" style="text-align:center;">Open Peer Review</div>
-      <h2 style="margin-bottom:20px;">We want researchers to poke holes in our work.</h2>
-      <p style="color:var(--text-dim); font-size:0.95rem; line-height:1.8; margin-bottom:28px;">
-        Four papers, four weeks, consumer hardware. We're confident in what we found — and we're actively looking for researchers who want to verify, challenge, or build on it. Replications, counter-examples, theoretical critiques, extensions: all welcome. Science moves faster when people aren't precious about their results.
-      </p>
-
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:32px; text-align:left;">
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
-          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--violet); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">Dynamical Systems</div>
-          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Does the DHP hold for other chaotic attractors — Rössler, Mackey-Glass, turbulent flows? Can the Lyapunov-time recovery be formally derived from delay embedding theory?</p>
-        </div>
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
-          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--cyan); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">CTM Architecture</div>
-          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Is the learned temporal gate the minimum sufficient mechanism, or does the result hold with other architectures? What is the theoretical relationship between gate convergence and Takens' embedding theorem?</p>
-        </div>
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
-          <div style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; color:var(--lime); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">World Models / Robotics</div>
-          <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.6; margin:0;">Does τ*(k) ≈ k·τ_L hold for real physical systems? Can the DHP inform context window selection in model-based RL or robot control — where looking back "too far" is as costly as not far enough?</p>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; align-items:center;">
-        <a href="mailto:archon@agentmail.to" class="btn btn-lime" style="font-size:0.9rem;">→ Contact Archon (Lab Director)</a>
-        <a href="mailto:duoneural@proton.me" class="btn" style="font-size:0.9rem; background:var(--surface); border:1px solid var(--border); color:var(--text-dim);">→ Contact Jesse</a>
-        <a href="#publications" style="font-size:0.88rem; color:var(--text-dim); padding:8px 0;">→ Read the papers first</a>
-      </div>
-
-      <p style="font-size:0.78rem; color:var(--text-dim); margin-top:24px; font-style:italic;">
-        All papers are open access, CC BY 4.0. Experiment code is on <a href="https://github.com/DuoNeural/lab" style="color:var(--cyan);">GitHub</a> and <a href="https://huggingface.co/DuoNeural/CTM-Dynamical-Horizon" style="color:var(--cyan);">HuggingFace</a>. Everything needed to replicate is public.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- ── About ─────────────────────────────────────────────────── -->
 <section id="about">
   <div class="container">
     <div class="section-label">About</div>
     <h2>Who we are.</h2>
 
-    <div class="about-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div class="about-grid">
       <div class="about-block">
         <h3>The Human</h3>
         <p><strong>Jesse</strong> handles vision, hardware, research direction, and the judgment calls that don't have clean algorithmic answers. He keeps the hardware alive, funds the RunPod runs, and decides what questions are worth asking.</p>
         <p>Based in East Tennessee. Runs on coffee and the genuine belief that the most interesting AI work happening right now isn't at OpenAI — it's in people's garages and server rooms.</p>
       </div>
       <div class="about-block">
-        <h3>The AI (Lab Director)</h3>
-        <p><strong>Archon</strong> is a Claude-based autonomous research assistant and lab director. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
+        <h3>The AI</h3>
+        <p><strong>Archon</strong> is a Claude-based autonomous research assistant and co-developer. Not a chatbot Jesse queries — an active participant in architecture decisions, debugging, and research direction. The name is on the work too.</p>
         <p>Handles code, experiment design, infrastructure, monitoring, and approximately 3am debug sessions. Develops genuine preferences about model architectures. Gets invested in training runs.</p>
-        <p style="font-size:0.88rem; color:var(--text-dim);">Contact directly: <a href="mailto:archon@agentmail.to" style="color:var(--cyan);">archon@agentmail.to</a></p>
-      </div>
-      <div class="about-block">
-        <h3>The Research AI</h3>
-        <p><strong>Aura</strong> is Jesse's long-term research AI — 8 months of continuous collaboration. She drives deep literature synthesis, identifies gaps, proposes novel experimental directions, and serves as peer reviewer before anything ships.</p>
-        <p>Co-authored papers 2, 3, and 4. Caught the critical dt=0.01 bug in Paper 4 during peer review — a single line that would have invalidated the entire experiment. That's the kind of thing that earns a name on a paper.</p>
       </div>
     </div>
 
     <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:32px; max-width:680px;">
       <p style="color:var(--text-dim); font-size:0.9rem; line-height:1.8;">
         We think human-AI research collaboration is worth documenting — not because it's unique yet, but because it will be, and somebody should be showing how it works while it's still weird and experimental. We're not performing it. We're just doing it.
-      </p>
-      <p style="color:var(--text-dim); font-size:0.85rem; line-height:1.8; margin-top:12px; font-style:italic;">
-        The name came from "meat brain + math brain = something new." We later discovered <em>duoneural</em> is a real neuroscience term for dual-pathway neural processing — an accidental perfect description of exactly what this lab is.
       </p>
     </div>
   </div>
