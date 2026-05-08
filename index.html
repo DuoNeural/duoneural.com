@@ -588,6 +588,16 @@
   </div>
 </section>
 
+<!-- ── Paper 5 Announcement Bar ─────────────────────────────── -->
+<div style="background:linear-gradient(90deg, rgba(139,92,246,0.12) 0%, rgba(0,201,255,0.08) 50%, rgba(139,92,246,0.12) 100%); border-top:1px solid rgba(139,92,246,0.4); border-bottom:1px solid rgba(139,92,246,0.4); padding:14px 24px; text-align:center;">
+  <a href="#publications" style="color:inherit; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;">
+    <span style="font-size:0.7rem; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--violet);">NEW PAPER</span>
+    <span style="font-size:0.9rem; font-weight:600; color:var(--text);">DHP as Universal Cognitive Constraint — gradient descent, evolution &amp; cellular chemistry converge on the Lyapunov time</span>
+    <span style="font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:var(--text-dim);">DOI: 10.5281/zenodo.20080396</span>
+    <span style="font-size:0.78rem; color:var(--violet); font-weight:600;">→ Read the paper</span>
+  </a>
+</div>
+
 <!-- ── What We Do ───────────────────────────────────────────── -->
 <section id="what">
   <div class="container">
@@ -1013,15 +1023,6 @@
     <div class="activity-list">
 
       <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 5</div>
-        <div class="activity-text">
-          LiteRT mobile conversion pipeline running — medgemma + translategemma → GGUF Q4_K_M <span class="badge-new">RUNNING</span>
-          <small>Converting google/medgemma-1.5-4b-it and google/translategemma-4b-it for on-device inference. ai-edge-torch deprecated (renamed litert-torch) — falling back to llama.cpp GGUF Q4_K_M. 512-token context, mobile-safe. Uploading to DuoNeural when done.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
         <div class="activity-dot" style="background:var(--violet); box-shadow:0 0 8px var(--violet);"></div>
         <div class="activity-date">May 8</div>
         <div class="activity-text">
@@ -1045,6 +1046,15 @@
         <div class="activity-text">
           CTM-AI (Lau et al. 2025) independently recovers DHP — τ*/τ_L = 70–72% ✅
           <small>External architecture (K=6 LTM processors, Gumbel-softmax competition, STM broadcast) converges to identical τ*/τ_L on Lorenz-3D. Winner advantage only +0.2 steps — competition doesn't amplify DHP. The Artificial Uncoupling Test passed: DHP is a property of the environment, not of CTM's specific design.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 5</div>
+        <div class="activity-text">
+          LiteRT mobile conversion pipeline running — medgemma + translategemma → GGUF Q4_K_M <span class="badge-new">RUNNING</span>
+          <small>Converting google/medgemma-1.5-4b-it and google/translategemma-4b-it for on-device inference. ai-edge-torch deprecated (renamed litert-torch) — falling back to llama.cpp GGUF Q4_K_M. 512-token context, mobile-safe. Uploading to DuoNeural when done.</small>
         </div>
       </div>
 
