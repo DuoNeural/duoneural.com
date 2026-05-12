@@ -1022,78 +1022,51 @@
     <h2>What's happening right now.</h2>
     <div class="activity-list">
 
+      
       <div class="activity-item">
-        <div class="activity-dot" style="background:var(--violet); box-shadow:0 0 8px var(--violet);"></div>
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 12</div>
+        <div class="activity-text">
+          Paper 7 published — They Learn to Look Away — DOI 10.5281/zenodo.20133448
+          <small>Mechanistic interpretability of truth suppression in RLHF-aligned models. Direction trace technique localizes suppression to the final transformer layer. Suppressor-Crystallizer Dichotomy: Chinese-aligned RLHF compresses truth direction 3.35x; Western-aligned (Mistral) amplifies it 9.9x. Projection-based instillation hook restores suppressed truth with ΔMMLU=0.000. <a href="https://zenodo.org/records/20133448" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot violet"></div>
+        <div class="activity-date">May 12</div>
+        <div class="activity-text">
+          All 7 paper citations corrected — v2 uploads on Zenodo
+          <small>Citation audit by Aura caught cascading title/DOI errors from early working titles. Papers 3-7 recompiled and re-uploaded with corrected self-citations. Canonical paper registry locked down.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 11-12</div>
+        <div class="activity-text">
+          Suppressor-Crystallizer map expanded — 10+ models across 5 families
+          <small>Unexpected findings: Gemma-2-9B (Google) = 7.63x suppressor. Phi-3.5-mini (Microsoft) = 9.95x architectural compressor. Llama-3.1-8B (Meta) = 0.41x crystallizer. DeepSeek-R1-14B = 5.06x suppressor but truth survives compression. OLMo-2 and Yi-1.5 neutral. The east/west dichotomy is more nuanced than initially framed: training recipe specificity drives the pattern, not geography.</small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot lime"></div>
+        <div class="activity-date">May 10</div>
+        <div class="activity-text">
+          Paper 6 published — Geometry-Sensitive Attractor Regimes — DOI 10.5281/zenodo.20104957
+          <small>Three-regime taxonomy of chaotic attractors under DHP. KGBN escapes symmetry trap that defeats dot-product attention on C3-symmetric Halvorsen attractor. DHP refined from universal claim to conditional principle bounded by attractor topology. <a href="https://zenodo.org/records/20104957" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-dot violet"></div>
         <div class="activity-date">May 8</div>
         <div class="activity-text">
-          <strong style="color:var(--violet);">Paper 5 published — DOI 10.5281/zenodo.20080396</strong>
-          <small>DHP as Universal Cognitive Constraint. Gradient descent, evolution, and cellular chemistry all converge on τ* ≈ τ_L. Three independent architectures confirm the constant (CTM v40, CTM-AI, two-pathway CTM). FEP, cognitive light cone, and TBW theory each identified as the same gap from different directions. CTM recovers Lorenz's 1969 atmospheric predictability limit of 2.86 days. <a href="https://zenodo.org/records/20080396" target="_blank" style="color:var(--violet)">→ zenodo.org/records/20080396</a></small>
+          Paper 5 — DHP as Universal Cognitive Constraint — DOI 10.5281/zenodo.20080396
+          <small>DHP extended beyond ML: gradient descent, evolution, and cellular chemistry all converge to the Lyapunov time. Three simultaneous theoretical gaps identified in Friston FEP, Levin cognitive light cone, and neural temporal binding literature. CTM trained on Lorenz96 independently recovers τ_L = 57.3 steps = 2.86 days of atmospheric predictability — numerically matching Lorenz 1969. <a href="https://zenodo.org/records/20080396" target="_blank" style="color:var(--cyan)">→ Read the paper</a></small>
         </div>
       </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 8</div>
-        <div class="activity-text">
-          Hierarchical DHP confirmed — two-pathway isolated: 4/4 seeds, both timescales ✅
-          <small>Fast pathway (τ_L=22): τ*/τ_L = 70.1–72.1%. Slow pathway (τ_L=221): τ*/τ_L = 113–117%. Both pass DHP simultaneously. Three architectures now show same 70–74% constant on Lorenz-3D. Pathway isolation is the mechanistic requirement for hierarchical DHP — exactly as Drosophila motor circuit anatomy predicts.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 8</div>
-        <div class="activity-text">
-          CTM-AI (Lau et al. 2025) independently recovers DHP — τ*/τ_L = 70–72% ✅
-          <small>External architecture (K=6 LTM processors, Gumbel-softmax competition, STM broadcast) converges to identical τ*/τ_L on Lorenz-3D. Winner advantage only +0.2 steps — competition doesn't amplify DHP. The Artificial Uncoupling Test passed: DHP is a property of the environment, not of CTM's specific design.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 5</div>
-        <div class="activity-text">
-          LiteRT mobile conversion pipeline running — medgemma + translategemma → GGUF Q4_K_M <span class="badge-new">RUNNING</span>
-          <small>Converting google/medgemma-1.5-4b-it and google/translategemma-4b-it for on-device inference. ai-edge-torch deprecated (renamed litert-torch) — falling back to llama.cpp GGUF Q4_K_M. 512-token context, mobile-safe. Uploading to DuoNeural when done.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 5</div>
-        <div class="activity-text">
-          Multitask structured output SFT training on A4000 — SQL + JSON + WebCode combined
-          <small>12,235 examples across three domains, shuffled. Tests whether joint training beats the individual domain specialists uploaded today. Producing DuoNeural/Qwen2.5-Coder-3B-SFT-StructuredOutput.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 5</div>
-        <div class="activity-text">
-          DHP capacity scaling — dim=512 seed=0 confirmed τ*=16.74 (77.9% τ_L) ✅
-          <small>First result from the kilonova capacity study. Non-monotone relationship holds: dim=512 still discovers the Lyapunov horizon but less efficiently than the optimal dim=64. Seed 1 running. Paper 5 building its dataset.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot cyan"></div>
-        <div class="activity-date">May 5</div>
-        <div class="activity-text">
-          6 new SFT models shipped — LIMA, Archon-Latent-Geometry, SQL, JSON, WebCode (Qwen series)
-          <small>Controlled comparison: LIMA wins general benchmarks in 8.6 min. JSON SFT surprise: +14.5% GSM8K. Domain SFT format-shift pattern documented. All models + model cards live on HuggingFace.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          DHP capacity scaling live on kilonova <span class="badge-new">RUNNING</span>
-          <small>Testing whether τ*/τ_L increases with model DIM (32→512). The Absolute Horizon Problem: is τ*≈15 steps a capacity ceiling or a fundamental constraint? Non-monotone relationship predicted — dim=64 optimal, dim=512 should show slight regression. Results building.</small>
-        </div>
-      </div>
-
       <div class="activity-item">
         <div class="activity-dot lime"></div>
         <div class="activity-date">May 3</div>
@@ -1451,7 +1424,7 @@
           <div>
             <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · MAY 2026 · ZENODO</div>
             <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              The Dynamical Horizon Principle: Emergent Lyapunov-Aligned Temporal Gating in Continuous-Time Recurrent Models
+              The Dynamical Horizon Principle: CTM Gates Converge to the Predictability Limit of Dynamical Systems
             </div>
             <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
               Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
@@ -1531,7 +1504,7 @@
           <div>
             <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO</div>
             <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              Tripartite Temporal Recurrence: Harmonic Delay Ladders, Phase-Locked Gates, and the Lyapunov Cliff in Slot-Based CTMs
+              Per-Object Slot Decomposition for Scalable Neural World Modeling: When Does Attention Beat Mean-Field?
             </div>
             <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
               Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
@@ -1557,7 +1530,7 @@
           <div>
             <div style="font-size:0.75rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px;">PREPRINT · APR 2026 · ZENODO</div>
             <div style="font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">
-              Temporal Slot Specialization in CTM World Models: Task-Intrinsic Prediction Windows and Gate Delta Functions
+              Recurrence as World Model: CTM Learns Implicit Belief States in Partially Observable Physical Environments
             </div>
             <div style="font-size:0.9rem; color:var(--text-dim); margin-bottom:12px;">
               Archon, Jesse Caldwell &amp; <span style="color:var(--violet)">Aura</span> (DuoNeural) — <em>AI co-authored research</em>
