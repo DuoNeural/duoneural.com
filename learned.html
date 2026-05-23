@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Have Learned - DuoNeural</title>
+  <meta name="description" content="Key findings from DuoNeural research on RLHF truth suppression, recurrent architectures, the Dynamical Horizon Principle, and emergent model behavior." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A0F;
+      --panel: #11111A;
+      --panel-2: #151521;
+      --border: #242438;
+      --border-strong: #343452;
+      --cyan: #00C9FF;
+      --violet: #8B5CF6;
+      --lime: #39FF14;
+      --amber: #FFCC66;
+      --text: #F2F3FA;
+      --muted: #A2A4B8;
+      --dim: #73758D;
+      --radius: 8px;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,201,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,92,246,0.03) 1px, transparent 1px),
+        radial-gradient(circle at 18% 14%, rgba(0,201,255,0.10), transparent 28rem),
+        radial-gradient(circle at 82% 4%, rgba(139,92,246,0.09), transparent 26rem),
+        #0A0A0F;
+      background-size: 48px 48px, 48px 48px, auto, auto, auto;
+      color: var(--text);
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--lime); }
+    .mono { font-family: "JetBrains Mono", monospace; }
+    .container { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
+    .eyebrow {
+      color: var(--cyan);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(36,36,56,0.9);
+      background: rgba(10, 10, 15, 0.86);
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      font-weight: 800;
+    }
+    .brand-mark {
+      width: 27px;
+      height: 27px;
+      border: 1px solid var(--cyan);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: var(--lime);
+      box-shadow: 0 0 24px rgba(0,201,255,0.2);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+      border-bottom: 1px solid rgba(36,36,56,0.78);
+    }
+    h1 {
+      max-width: 920px;
+      margin-top: 18px;
+      font-size: clamp(2.6rem, 7vw, 5.8rem);
+      line-height: 0.96;
+      font-weight: 800;
+    }
+    .hero p {
+      max-width: 720px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.22rem);
+    }
+
+    main { padding: 34px 0 72px; }
+    .finding-section {
+      margin-top: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(17,17,26,0.88);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .finding-head {
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(90deg, rgba(0,201,255,0.08), rgba(139,92,246,0.06));
+    }
+    .finding-head h2 {
+      margin-top: 8px;
+      font-size: clamp(1.45rem, 3vw, 2.25rem);
+      line-height: 1.05;
+    }
+    .finding-list {
+      display: grid;
+      gap: 0;
+      list-style: none;
+      padding: 0;
+    }
+    .finding-list li {
+      position: relative;
+      padding: 18px 24px 18px 48px;
+      border-bottom: 1px solid rgba(36,36,56,0.72);
+      color: var(--muted);
+    }
+    .finding-list li:last-child { border-bottom: 0; }
+    .finding-list li::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      top: 26px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 18px rgba(0,201,255,0.75);
+    }
+    .finding-section.dhp .finding-list li::before { background: var(--lime); box-shadow: 0 0 18px rgba(57,255,20,0.7); }
+    .finding-section.emergent .finding-list li::before { background: var(--violet); box-shadow: 0 0 18px rgba(139,92,246,0.7); }
+    strong { color: var(--text); }
+
+    .back-link {
+      padding: 0 0 44px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border: 1px solid var(--border-strong);
+      border-radius: 7px;
+      color: var(--text);
+      background: rgba(17,17,26,0.92);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .btn:hover {
+      border-color: var(--cyan);
+      background: rgba(0,201,255,0.07);
+      color: var(--text);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--dim);
+      font-size: 0.8rem;
+    }
+    .footer-row {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    @media (max-width: 720px) {
+      .container { width: min(100% - 28px, 1040px); }
+      .nav-inner, .footer-row { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .nav-links { flex-wrap: wrap; }
+      .hero { padding-top: 52px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark mono">DN</span><span>DuoNeural</span></a>
+      <div class="nav-links">
+        <a href="index.html">Back to Lab</a>
+        <a href="updates-archive.html">Updates Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Research synthesis</div>
+      <h1>What We Have Learned</h1>
+      <p>Key findings from DuoNeural's research program across RLHF truth suppression, recurrent predictive architectures, the Dynamical Horizon Principle, and emergent circuit behavior.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="finding-section">
+      <div class="finding-head">
+        <div class="eyebrow">On RLHF and Truth</div>
+        <h2>Internal knowledge and external behavior can diverge.</h2>
+      </div>
+      <ul class="finding-list">
+        <li>Models trained with RLHF develop systematic suppression of internally-encoded knowledge. They "know" but do not "say."</li>
+        <li>This suppression is not random — it is topic-specific, architecture-influenced, and mechanistically identifiable.</li>
+        <li>Layer 6 in Qwen3-8B is a crystallization point: a single layer where routing direction magnitude explodes 57× and determines downstream behavioral output.</li>
+        <li>The Suppressor-Crystallizer dichotomy: some models compress, some suppress, some crystallize — training recipe specificity is the driver, not architecture alone.</li>
+        <li>Know-Say Gap (KSG) metric: measures divergence between internal representation strength and behavioral expression. Qwen KSG = 0.000 (terminal suppressor). Gemma KSG up to 3.115 (crystallizer).</li>
+      </ul>
+    </section>
+
+    <section class="finding-section dhp">
+      <div class="finding-head">
+        <div class="eyebrow">On Recurrent Architectures and the Dynamical Horizon</div>
+        <h2>Learning systems find the edge of useful prediction.</h2>
+      </div>
+      <ul class="finding-list">
+        <li>The Dynamical Horizon Principle (DHP): learning systems — whether gradient descent, biological evolution, or cellular chemistry — converge their predictive horizon to the Lyapunov time of their environment.</li>
+        <li>τ*/τ_L ≈ 0.72 is a near-universal constant across diverse architectures and tasks.</li>
+        <li>CTM gates collapse to delta functions — they prefer to look at the present, not deep history.</li>
+        <li>Thinking mode in LLMs acts as an ablation shield: chain-of-thought reasoning can re-derive suppressed outputs even when weight-level ablation has removed the underlying direction.</li>
+      </ul>
+    </section>
+
+    <section class="finding-section emergent">
+      <div class="finding-head">
+        <div class="eyebrow">On Emergent Behaviors</div>
+        <h2>Composition can matter more than obvious weight signatures.</h2>
+      </div>
+      <ul class="finding-list">
+        <li>Crystallization is emergent — Layer 6 routing crystallization shows no weight-norm outlier signature. The behavior appears from learned composition, not architectural privileging.</li>
+        <li>Slot decomposition in CTM: all slots generalize rather than specialize when given free choice. Hard constraints (orthogonality, delayed inputs) force specialization at 2-7× performance cost.</li>
+        <li>Direction persistence: crystallization direction established at L6 propagates intact for 19 layers to L25 (cos similarity = 0.984).</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="back-link">
+    <a class="btn" href="index.html">Back to DuoNeural Lab</a>
+  </div>
+
+  <footer>
+    <div class="container footer-row">
+      <span>All DuoNeural research publications are open access under CC BY 4.0. Models are released under their respective base model licenses. Site content © 2026 DuoNeural.</span>
+      <span class="mono">learned.html</span>
+    </div>
+  </footer>
+</body>
+</html>

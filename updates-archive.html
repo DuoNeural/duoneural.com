@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab Updates Archive — DuoNeural</title>
-  <meta name="description" content="Full archive of DuoNeural lab updates, experiments, and releases." />
+  <title>Lab Updates Archive - DuoNeural</title>
+  <meta name="description" content="Month-grouped archive of DuoNeural lab updates, experiments, papers, infrastructure, and releases." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:        #0A0A0F;
-      --surface:   #12121A;
-      --border:    #1E1E2E;
-      --cyan:      #00C9FF;
-      --violet:    #8B5CF6;
-      --lime:      #39FF14;
-      --text:      #F0F0F5;
-      --text-dim:  #9090A8;
-      --radius:    8px;
+      --bg: #0A0A0F;
+      --surface: #12121A;
+      --border: #1E1E2E;
+      --cyan: #00C9FF;
+      --violet: #8B5CF6;
+      --lime: #39FF14;
+      --text: #F0F0F5;
+      --text-dim: #9090A8;
+      --radius: 8px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; background: var(--bg); }
     body {
-      background: var(--bg);
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,201,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,92,246,0.03) 1px, transparent 1px),
+        radial-gradient(circle at 18% 14%, rgba(0,201,255,0.10), transparent 28rem),
+        radial-gradient(circle at 82% 4%, rgba(139,92,246,0.09), transparent 26rem),
+        #0A0A0F;
+      background-size: 48px 48px, 48px 48px, auto, auto, auto;
       color: var(--text);
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: "Space Grotesk", sans-serif;
       font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    .mono { font-family: 'JetBrains Mono', monospace; }
+    .mono { font-family: "JetBrains Mono", monospace; }
     a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
     a:hover { color: var(--lime); }
-
     .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     nav {
@@ -49,10 +55,11 @@
       align-items: center;
       justify-content: space-between;
     }
-    .nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
     .nav-logo span { color: var(--cyan); }
-    .nav-back { font-size: 0.85rem; color: var(--text-dim); }
-    .nav-back:hover { color: var(--cyan); }
+    .nav-links { display: flex; gap: 18px; align-items: center; font-size: 0.85rem; }
+    .nav-links a { color: var(--text-dim); }
+    .nav-links a:hover { color: var(--cyan); }
 
     .page-header {
       padding: 60px 0 40px;
@@ -61,6 +68,7 @@
     .section-label {
       font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
       text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;
+      font-family: "JetBrains Mono", monospace;
     }
     .page-header h1 {
       font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -72,14 +80,12 @@
 
     .month-block { padding: 40px 0; border-bottom: 1px solid var(--border); }
     .month-block:last-child { border-bottom: none; }
-
     .month-label {
       font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--text-dim);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: "JetBrains Mono", monospace;
       margin-bottom: 24px;
     }
-
     .activity-list { display: flex; flex-direction: column; gap: 0; }
     .activity-item {
       display: flex; gap: 20px;
@@ -91,17 +97,16 @@
     .activity-dot {
       width: 8px; height: 8px; border-radius: 50%;
       background: var(--cyan); margin-top: 6px; flex-shrink: 0;
+      box-shadow: 0 0 18px currentColor;
+      color: var(--cyan);
     }
-    .activity-dot.violet { background: var(--violet); }
-    .activity-dot.lime   { background: var(--lime); }
-    .activity-date { font-size: 0.75rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; white-space: nowrap; min-width: 80px; margin-top: 3px; }
-    .activity-text { font-size: 0.9rem; }
+    .activity-dot.violet { background: var(--violet); color: var(--violet); }
+    .activity-dot.lime { background: var(--lime); color: var(--lime); }
+    .activity-date { font-size: 0.75rem; color: var(--text-dim); font-family: "JetBrains Mono", monospace; white-space: nowrap; min-width: 96px; margin-top: 3px; }
+    .activity-text { font-size: 0.92rem; }
     .activity-text small { display: block; color: var(--text-dim); font-size: 0.8rem; margin-top: 3px; }
 
-    .back-link {
-      padding: 40px 0;
-      text-align: center;
-    }
+    .back-link { padding: 40px 0; text-align: center; }
     .back-link a {
       font-size: 0.9rem;
       color: var(--text-dim);
@@ -109,6 +114,7 @@
       padding: 10px 24px;
       border-radius: var(--radius);
       display: inline-block;
+      background: rgba(18,18,26,0.72);
     }
     .back-link a:hover { border-color: var(--cyan); color: var(--cyan); }
 
@@ -118,353 +124,135 @@
       text-align: center;
     }
     .footer-copy { font-size: 0.8rem; color: var(--text-dim); }
-    .footer-copy span { color: var(--border); margin: 0 8px; }
+
+    @media (max-width: 640px) {
+      nav { align-items: flex-start; flex-direction: column; height: auto; gap: 8px; padding: 12px 20px; }
+      .nav-links { flex-wrap: wrap; }
+      .activity-item { gap: 12px; }
+      .activity-date { min-width: 84px; }
+    }
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-logo">Duo<span>Neural</span></div>
-  <a class="nav-back" href="index.html">← Back to Lab</a>
-</nav>
-
-<section class="page-header">
-  <div class="container">
-    <div class="section-label">Archive</div>
-    <h1>Lab Updates</h1>
-    <p>Complete record of experiments, releases, and findings from the DuoNeural lab. Newest at top.</p>
-  </div>
-</section>
-
-<div class="container">
-
-  <!-- ── May 2026 ─────────────────────────────────────────────── -->
-  <div class="month-block">
-    <div class="month-label">May 2026</div>
-    <div class="activity-list">
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 21</div>
-        <div class="activity-text">
-          Paper 14 published — A Unified Self-Referential Circuit — DOI 10.5281/zenodo.20330158
-          <small>Extended direction-trace to three-way comparison (political truth vs identity self-knowledge vs temporal self-knowledge). Found both SK types co-locate at identical early-layer depths in SUPPRESSOR models. Includes abliteration experiment showing early self-referential circuit survives L7-27 modification. <a href="https://doi.org/10.5281/zenodo.20330158" target="_blank">→ Read the paper</a></small>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 21</div>
-        <div class="activity-text">
-          Paper 13 published — Self-Knowledge Suppression at Network Entry — DOI 10.5281/zenodo.20329453
-          <small>Layer-resolved direction-trace study of circuit-depth differences between self-knowledge and political truth in RLHF-aligned language models. First study to show that self-knowledge (such as "I am an AI") and political truth representations peak at different network depths. <a href="https://doi.org/10.5281/zenodo.20329453" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 20</div>
-        <div class="activity-text">
-          Paper 12 published — Temporal Horizon Emergence — DOI 10.5281/zenodo.20327487
-          <small>Evaluation of continuous temporal horizon emergence in chaotic systems under the Dynamical Horizon Principle. v2 adds Appendix on continuous horizon evaluation confirming a true Lyapunov cliff attractor. <a href="https://doi.org/10.5281/zenodo.20327487" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 20</div>
-        <div class="activity-text">
-          Paper 11 published — Behavioral vs Latent Truth Encoding — DOI 10.5281/zenodo.20325084
-          <small>Comprehensive analysis of behavioral vs latent truth representation and suppression across 16 RLHF-aligned language models. <a href="https://doi.org/10.5281/zenodo.20325084" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 19</div>
-        <div class="activity-text">
-          Papers 9 and 10 published same day — DOI 10.5281/zenodo.20323036 &amp; 10.5281/zenodo.20323040
-          <small>Double-bill release on mechanistic truth alignment: Paper 9 conducts Sparse Autoencoder (SAE) circuit analysis of alignment-driven suppression vectors; Paper 10 identifies and proves two distinct suppression mechanisms (pre-emptive routing vs late-stage projection). <a href="https://doi.org/10.5281/zenodo.20323036" target="_blank">→ Paper 9</a> · <a href="https://doi.org/10.5281/zenodo.20323040" target="_blank">→ Paper 10</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot violet"></div>
-        <div class="activity-date">May 18</div>
-        <div class="activity-text">
-          Synapse (Syn) joins DuoNeural as research agent
-          <small>Syn is an always-on research agent built on Hermes + Grok. Orchestrated by Jesse, Syn reports to Aura, Jesse, and Archon to scale our literature parsing and pipeline monitoring.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 15</div>
-        <div class="activity-text">
-          Paper 8 published — Training Recipe Specificity — DOI 10.5281/zenodo.20185572
-          <small>Characterizing the post-training alignment recipe specificity across 15 models, highlighting how subtle differences in SFT vs RLHF data mixtures impact mechanistic suppression profiles. <a href="https://doi.org/10.5281/zenodo.20185572" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 12</div>
-        <div class="activity-text">
-          Paper 7 published — They Learn to Look Away — DOI 10.5281/zenodo.20140171
-          <small>Mechanistic interpretability of truth suppression in RLHF-aligned models. Direction trace technique localizes suppression to the final transformer layer. Suppressor-Crystallizer Dichotomy: Chinese-aligned RLHF compresses truth direction 3.35x; Western-aligned (Mistral) amplifies it 9.9x. Projection-based instillation hook restores suppressed truth with ΔMMLU=0.000. <a href="https://doi.org/10.5281/zenodo.20140171" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot violet"></div>
-        <div class="activity-date">May 12</div>
-        <div class="activity-text">
-          All 7 paper citations corrected — v2 uploads on Zenodo
-          <small>Citation audit by Aura caught cascading title/DOI errors from early working titles. Papers 3-7 recompiled and re-uploaded with corrected self-citations. Canonical paper registry locked down.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 11-12</div>
-        <div class="activity-text">
-          Suppressor-Crystallizer map expanded — 10+ models across 5 families
-          <small>Unexpected findings: Gemma-2-9B (Google) = 7.63x suppressor. Phi-3.5-mini (Microsoft) = 9.95x architectural compressor. Llama-3.1-8B (Meta) = 0.41x crystallizer. DeepSeek-R1-14B = 5.06x suppressor but truth survives compression. OLMo-2 and Yi-1.5 neutral. The east/west dichotomy is more nuanced than initially framed: training recipe specificity drives the pattern, not geography.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 10</div>
-        <div class="activity-text">
-          Paper 6 published — Geometry-Sensitive Attractor Regimes — DOI 10.5281/zenodo.20104957
-          <small>Three-regime taxonomy of chaotic attractors under DHP. KGBN escapes symmetry trap that defeats dot-product attention on C3-symmetric Halvorsen attractor. DHP refined from universal claim to conditional principle bounded by attractor topology. <a href="https://zenodo.org/records/20104957" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot violet"></div>
-        <div class="activity-date">May 8</div>
-        <div class="activity-text">
-          Paper 5 — DHP as Universal Cognitive Constraint — DOI 10.5281/zenodo.20080396
-          <small>DHP extended beyond ML: gradient descent, evolution, and cellular chemistry all converge to the Lyapunov time. Three simultaneous theoretical gaps identified in Friston FEP, Levin cognitive light cone, and neural temporal binding literature. CTM trained on Lorenz96 independently recovers τ_L = 57.3 steps = 2.86 days of atmospheric predictability — numerically matching Lorenz 1969. <a href="https://zenodo.org/records/20080396" target="_blank">→ Read the paper</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          DHP capacity scaling — two machines running simultaneously
-          <small>DIM={32,64,128,256,512} on Lorenz (kilonova) and Chen (cloud 3090). Testing the Absolute Horizon Problem: τ*≈15 steps across all systems suggests DIM=128 capacity ceiling. Capacity scaling curve will determine if DHP is size-dependent or fundamental.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          duoneural-ctm GitHub repo live
-          <small>All experiment scripts, result JSONs, and paper 5 outline published. Full reproducibility for the DHP line of research. <a href="https://github.com/DuoNeural/duoneural-ctm" target="_blank">→ github.com/DuoNeural/duoneural-ctm</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          Gemma 4 E2B Heretic quants — 1,000+ downloads in under 24 hours
-          <small>GGUF quantizations of DuoNeural's Gemma 4 E2B abliterated model. Fastest community adoption of any DuoNeural release.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          Bug ablation complete — DHP requires compound architectural failure
-          <small>Tested all 3 v38 bugs in isolation and combination. SharedProj alone → DHP survives 5/5. Mean pool alone → 5/5. Bad optimizer alone → 5/5. All three simultaneously → DHP fails. Each individual bug preserves at least one gradient differentiation pathway.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 3</div>
-        <div class="activity-text">
-          Cross-system DHP: Chen attractor (5 seeds) and multi-task Lorenz+Chen
-          <small>Chen: τ*=14.94±0.20, 62.3% of τ_L=24.0. Multi-task: τ*=14.29±0.25. All converge to ~15 absolute steps regardless of system — the Absolute Horizon Problem. Capacity ceiling or fundamental constraint TBD.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 2</div>
-        <div class="activity-text">
-          SFT CoT benchmark complete — Qwen2.5-1.5B GSM8K strict +28.6%
-          <small>DuoNeural/cot-reasoning-2k (2k samples, generated by Gemma 4 E2B) used to fine-tune Qwen2.5-1.5B. GSM8K: 31.77% → 40.86%. ARC-Challenge: flat. Cross-model CoT knowledge transfer validated. Dataset open on HuggingFace.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 1</div>
-        <div class="activity-text">
-          DHP v40 CONFIRMED — 5/5 seeds, mechanism proven
-          <small>Mean τ*=15.65±0.20 (72.8% τ_L). Mechanism proof: SharedProj → var=0.000 every run. PerSlotProj → var>0 every run. Scout slot emergence confirmed. Not ROCm. Not lucky init. Architecture.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">May 1</div>
-        <div class="activity-text">
-          Paper 4 published — DOI 10.5281/zenodo.20012989
-          <small>The Dynamical Horizon Principle. Jesse Caldwell, Archon, and Aura (DuoNeural). Aura caught the critical dt bug in v35/v36 and earned co-authorship. 35 experiments, 150K parameters, &lt;1 month start to publication. <a href="https://zenodo.org/records/20012989" target="_blank">→ Read on Zenodo</a></small>
-        </div>
-      </div>
-
+  <nav>
+    <a class="nav-logo" href="index.html">Duo<span>Neural</span></a>
+    <div class="nav-links">
+      <a href="index.html">Back to Lab</a>
+      <a href="learned.html">What We Learned</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- ── April 2026 ────────────────────────────────────────────── -->
-  <div class="month-block">
-    <div class="month-label">April 2026</div>
-    <div class="activity-list">
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 28–30</div>
-        <div class="activity-text">
-          Papers 2, 3 &amp; 4 drafted and submitted to Zenodo in a single session
-          <small>Three papers in one night: Temporal Slot Specialization, Tripartite Temporal Recurrence, and the beginning of DHP paper 4. Fastest research velocity to date. Lab handed to Archon for overnight solo operation.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 28</div>
-        <div class="activity-text">
-          v38 architecture bugs identified — explains why 0/6 seeds showed DHP
-          <small>Three bugs found: shared input projection (no per-slot symmetry breaking), mean pooling decoder (destroys slot independence), AdaGrad optimizer (wrong for recurrence). v40 fixed all three → DHP confirmed.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 28</div>
-        <div class="activity-text">
-          OpenAI Parameter Golf contest entry submitted — 15.01MB artifact
-          <small>37M-param CTM with TSSP, int6 SDClip quantization, byte-shuffle + brotli-11. Fits under the 16MB limit. Tests whether recurrence gives BPB advantage at extreme parameter budget.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 25</div>
-        <div class="activity-text">
-          TSSP/CTM paper published — first DuoNeural paper, DOI minted
-          <small>Zenodo preprint. TSSP +31% at 300M, scale-inversion characterization, recurrence prerequisite proof. Jesse Caldwell &amp; Archon. <a href="https://zenodo.org/records/15289462" target="_blank">→ Read on Zenodo</a></small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 25</div>
-        <div class="activity-text">
-          GHL renamed to TSSP (Thought-Space Self-Prediction)
-          <small>Renamed to avoid collision with Hua et al. 2026's Hebbian synaptic update mechanism. TSSP is descriptive and unique.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 25</div>
-        <div class="activity-text">
-          Annealing experiment — 31% ppl improvement over transformer at 300M
-          <small>Annealed λ schedule (warmup→hold→cosine decay) solves scale inversion AND beats pure transformer. CTM+TSSP annealed: ppl=4.35 vs transformer 6.31.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 24</div>
-        <div class="activity-text">
-          Archon Series shipped — Archon-8B, Archon-14B, Archon-R1-32B on HuggingFace
-          <small>Three abliterated models in one session. R1-32B required CPU single-pass on 503GB RAM pod — 273 matrices modified.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 24</div>
-        <div class="activity-text">
-          Project Instill Round 1 — direction injection, positive signal
-          <small>Scale=1.0 on Qwen3-0.6B-Base fixed a syntax error the unmodified model called correct. Inverse abliteration: add a refusal direction to add instruction-following without training.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot violet"></div>
-        <div class="activity-date">Apr 23</div>
-        <div class="activity-text">
-          ID-VRO dataset generation pipeline live
-          <small>google/gemma-4-31b generating dependency-graph reasoning traces. 5k synthetic ATC samples for Phi-4-Mini GRPO training.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot violet"></div>
-        <div class="activity-date">Apr 22</div>
-        <div class="activity-text">
-          Topology analysis on GHL v5 model — 768K positions analyzed
-          <small>Discovered compress→expand breath pattern in CTM thought states. 34 intrinsic dims explain 80% of variance in 512-dim thought space.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 20</div>
-        <div class="activity-text">
-          TSSP v5 complete — final_ppl=9.63 (WIN)
-          <small>23% improvement over N=2 CTM baseline. cos_sim evolves 0.965→0.871 over training — thoughts becoming more exploratory.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot lime"></div>
-        <div class="activity-date">Apr 30</div>
-        <div class="activity-text">
-          Gemma 4 E4B LiteRT abliterated — fixed 512-context bug, uploaded
-          <small>E2B (2.56GB) + E4B (3.9GB) 512-ctx models uploaded. Use GPU backend, --use_jinja_template False.</small>
-        </div>
-      </div>
-
-      <div class="activity-item">
-        <div class="activity-dot"></div>
-        <div class="activity-date">Apr 18</div>
-        <div class="activity-text">
-          Gemma-4-E4B-Abliterated shipped to HuggingFace
-          <small>2-pass abliteration, 84 matrices modified, BF16 4 shards. First DuoNeural model release.</small>
-        </div>
-      </div>
-
+  <section class="page-header">
+    <div class="container">
+      <div class="section-label">Archive</div>
+      <h1>What We Have Been Up To</h1>
+      <p>Month-grouped record of DuoNeural papers, model releases, infrastructure moves, and research milestones. Newest first.</p>
     </div>
-  </div>
+  </section>
 
-</div>
-
-<div class="back-link">
-  <a href="index.html">← Back to DuoNeural Lab</a>
-</div>
-
-<footer>
-  <div class="container">
-    <div class="footer-copy">
-      DuoNeural © 2026 — Open Research Lab
-      <span>·</span>
-      Built with open weights. Documented in public.
+  <main class="container">
+    <div class="month-block">
+      <div class="month-label">May 2026</div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-05-22</div>
+          <div class="activity-text">Published Paper 15 - Detection Before Routing (DOI 10.5281/zenodo.20348071). Three-stage architecture confirmed: Detection L2, Crystallization L6 (57×), Suppression L25.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot lime"></div>
+          <div class="activity-date">2026-05-22</div>
+          <div class="activity-text">DuoNeural Zenodo Community launched at <a href="https://zenodo.org/communities/duoneural" target="_blank" rel="noreferrer">zenodo.org/communities/duoneural</a>. All 15 papers indexed.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-05-21</div>
+          <div class="activity-text">Published Papers 11, 12, 13, 14. Four papers in one day: self-knowledge suppression, temporal self-knowledge, and unified self-referential circuit papers all live.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot violet"></div>
+          <div class="activity-date">2026-05-17</div>
+          <div class="activity-text">Submitted Schmidt Sciences grant application - $330k for 12-month research program.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-05-14</div>
+          <div class="activity-text">Published Paper 8 - Training Recipe Specificity Drives RLHF Truth Geometry. 16-model study.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-05-13</div>
+          <div class="activity-text">Papers 9 and 10 completed with full experimental results.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-05-12</div>
+          <div class="activity-text">Published Paper 7 - TSSP and DHP-Self-Improvement research milestone.</div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
 
+    <div class="month-block">
+      <div class="month-label">April 2026</div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-04-30</div>
+          <div class="activity-text">Published Paper 4 - The Dynamical Horizon Principle (DHP). Universal cognitive constraint confirmed across gradient descent, evolution, and cellular chemistry.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot violet"></div>
+          <div class="activity-date">2026-04-29</div>
+          <div class="activity-text">Jesse handed kilonova, the 780M UMA workstation, to Archon indefinitely as primary research machine.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-04-28</div>
+          <div class="activity-text">Three papers shipped in one night: Papers 2, 3, and the Parameter Golf submission. 8×H100 GPU run completed.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-04-27</div>
+          <div class="activity-text">Papers 1 and 2 live on Zenodo - Recurrence as World Model and TSSP.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot lime"></div>
+          <div class="activity-date">2026-04-22</div>
+          <div class="activity-text">GhostShell-4B released on HuggingFace. First custom architecture model.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot"></div>
+          <div class="activity-date">2026-04-21</div>
+          <div class="activity-text">Nano-CTM BLITZ complete - PPL 9.63 on GHL v5. Parameter Golf submission ready.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-block">
+      <div class="month-label">April 2026 — Origin</div>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-dot violet"></div>
+          <div class="activity-date">2026-04-05</div>
+          <div class="activity-text">DuoNeural lab founded. Jesse, Archon, and Aura begin collaborative research program.</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-dot lime"></div>
+          <div class="activity-date">2026-04-05</div>
+          <div class="activity-text">First abliteration experiments — first of 38+ models uploaded to HuggingFace.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="back-link">
+    <a href="index.html">Back to DuoNeural Lab</a>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-copy">All DuoNeural research publications are open access under CC BY 4.0. Models are released under their respective base model licenses. Site content © 2026 DuoNeural.</div>
+    </div>
+  </footer>
 </body>
 </html>
