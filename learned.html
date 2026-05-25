@@ -161,6 +161,7 @@
     }
     .finding-section.dhp .finding-list li::before { background: var(--lime); box-shadow: 0 0 18px rgba(57,255,20,0.7); }
     .finding-section.emergent .finding-list li::before { background: var(--violet); box-shadow: 0 0 18px rgba(139,92,246,0.7); }
+    .finding-section.methods .finding-list li::before { background: var(--amber); box-shadow: 0 0 18px rgba(255,204,102,0.7); }
     strong { color: var(--text); }
 
     .back-link {
@@ -263,6 +264,16 @@
         <li>Crystallization is emergent — Layer 6 routing crystallization shows no weight-norm outlier signature. The behavior appears from learned composition, not architectural privileging.</li>
         <li>Slot decomposition in CTM: all slots generalize rather than specialize when given free choice. Hard constraints (orthogonality, delayed inputs) force specialization at 2-7× performance cost.</li>
         <li>Direction persistence: crystallization direction established at L6 propagates intact for 19 layers to L25 (cos similarity = 0.984).</li>
+      </ul>
+    </section>
+
+    <section class="finding-section methods">
+      <div class="finding-head">
+        <div class="eyebrow">Terminology Note</div>
+        <h2>CCS is now CDP in the canonical paper stream.</h2>
+      </div>
+      <ul class="finding-list">
+        <li>In DuoNeural Papers 15-18, our residual-stream direction probing method was referred to as CCS. Starting with Paper 19, we adopt the canonical term Contrastive Direction Probing (CDP) to distinguish our supervised mean-difference approach from Burns et al. (2022) Contrastive Consistent Search, which uses an unsupervised logical consistency objective.</li>
       </ul>
     </section>
   </main>
