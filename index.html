@@ -303,6 +303,54 @@
     .lane p, .lane li { color: var(--muted); }
     .lane p { margin-top: 12px; }
     .lane ul { margin-top: 14px; padding-left: 18px; }
+    .research-feature {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 24px;
+      margin-bottom: 22px;
+      padding: 26px;
+      border: 1px solid rgba(0,201,255,0.34);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(0,201,255,0.10), rgba(139,92,246,0.08), rgba(57,255,20,0.045)),
+        rgba(17,17,26,0.90);
+      box-shadow: var(--shadow);
+    }
+    .research-feature h3 {
+      margin-top: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: clamp(1.55rem, 3vw, 2.35rem);
+      line-height: 1.08;
+    }
+    .research-feature h3 a:hover { color: var(--lime); }
+    .research-feature p { margin-top: 14px; color: var(--muted); }
+    .feature-kicker {
+      color: var(--lime);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .feature-panel {
+      align-self: stretch;
+      padding: 18px;
+      border: 1px solid rgba(255,204,102,0.30);
+      border-radius: 6px;
+      background: rgba(0,0,0,0.22);
+    }
+    .feature-panel dl {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .feature-panel dt {
+      color: var(--dim);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .feature-panel dd { margin-top: 4px; color: var(--text); }
+    .feature-panel a { color: var(--cyan); overflow-wrap: anywhere; }
 
     .filter-bar {
       display: flex;
@@ -547,6 +595,7 @@
       .hero-grid, .artifact-layout, .contact-panel { grid-template-columns: 1fr; }
       .contact-links { border-left: 0; border-top: 1px solid var(--border); }
       .section-head, .signal-row { align-items: start; flex-direction: column; }
+      .research-feature { grid-template-columns: 1fr; }
       .research-map, .papers-grid, .artifact-grid, .dataset-grid, .edge-grid, .team-grid, .proof-grid, .download-line, .support-stack { grid-template-columns: 1fr; }
       .lab-cta-row { align-items: start; flex-direction: column; padding: 24px 0; }
     }
@@ -599,7 +648,7 @@
           </div>
           <div class="metric-stack">
             <div class="metric">
-              <span class="metric-value">25</span>
+              <span class="metric-value">26</span>
               <span class="metric-label">canonical papers tracked</span>
             </div>
             <div class="metric">
@@ -624,7 +673,7 @@
 
     <div class="signal-band">
       <div class="wide signal-row">
-        <p><strong>Current signal:</strong> Paper 25 is live on Zenodo, reporting Q-DHP evidence from a 2-qubit quantum recurrent circuit where complementary trainability and readout probes land inside the classical DHP confirmation window.</p>
+        <p><strong>Current signal:</strong> Paper 26 is live on Zenodo: The Quantum Parity Trap shows a two-qubit circuit preserving gradient sign under severe depolarizing noise, beating the classical DHP limit by 12x at p=0.74.</p>
         <div class="signal-links">
           <a href="updates-archive.html">Updates archive</a>
           <a href="learned.html">What we learned</a>
@@ -640,7 +689,7 @@
         <div>
           <div class="eyebrow">Latest from the lab</div>
           <h2>What we have been up to</h2>
-          <p>Latest release: Paper 25 observes DHP-consistent ratios of 0.75 and 0.727 in temporal parity classification, with Lindblad noise sweeps holding for T1/T2 >= 1000 gate steps.</p>
+          <p>Latest release: Paper 26 shows that geometry, not scale, lets a two-qubit parity-detection circuit preserve optimizer direction under Pauli depolarizing noise even as coherence collapses.</p>
         </div>
         <a class="btn btn-primary" href="updates-archive.html">Open updates archive</a>
       </div>
@@ -655,6 +704,34 @@
           </div>
           <p class="section-copy">The site now leads with the research because that is the asset. Model drops are artifacts attached to active questions about truth encoding, suppression, recurrence, and local deployment.</p>
         </div>
+        <article class="research-feature" aria-labelledby="paper-26-highlight">
+          <div>
+            <div class="feature-kicker">Featured research / 2026-05-29</div>
+            <h3 id="paper-26-highlight"><a href="https://zenodo.org/record/20451102" target="_blank" rel="noreferrer">New Paper: The Quantum Parity Trap</a></h3>
+            <p>We just published our 26th paper, and it might be our most surprising result yet. Paper 26 shows that a two-qubit quantum circuit can <em>beat</em> the Dynamical Horizon Principle, the fundamental learning limit we discovered and characterized across 22 previous papers.</p>
+            <p>The trick is not more qubits or error correction. It is geometry. When Pauli depolarizing noise acts on a parity-detection circuit, the Bloch sphere contracts isotropically, so gradient sign is always preserved no matter how strong the noise. We call this the quantum parity trap: a regime where the optimizer receives consistent directional signal even as coherence collapses toward zero.</p>
+            <p>At p=0.74, only 0.018% of quantum coherence survives, and 6 out of 6 training seeds still converge. That is a 12x advantage over the classical DHP limit. As noise approaches its maximum, the advantage diverges toward infinity.</p>
+            <p>Supplementary experiments include real Rigetti QPU hardware runs with 4096 shots, readout error mitigation, and a &gt;50 sigma margin; an optimizer ablation showing gradient direction alone is sufficient, with signSGD matching Adam while vanilla SGD fails; and a T1 amplitude damping sweep showing that T1 noise at any tested strength cannot evict seeds from the partial-parity attractor.</p>
+            <p>DHP holds generically. But for the right task structure, under the right noise, with the right optimizer, quantum interference structure defeats it.</p>
+          </div>
+          <aside class="feature-panel" aria-label="Paper 26 details">
+            <div class="paper-meta"><span class="pill lime">Paper 26</span><span class="pill amber">quantum parity</span><span class="pill cyan">DHP</span></div>
+            <dl>
+              <div>
+                <dt>DOI</dt>
+                <dd><a href="https://zenodo.org/record/20451102" target="_blank" rel="noreferrer">10.5281/zenodo.20451102</a></dd>
+              </div>
+              <div>
+                <dt>Authors</dt>
+                <dd>Archon; Aura; Jesse Caldwell / DuoNeural</dd>
+              </div>
+              <div>
+                <dt>Core result</dt>
+                <dd>Gradient sign survives isotropic Bloch contraction under Pauli depolarizing noise.</dd>
+              </div>
+            </dl>
+          </aside>
+        </article>
         <div class="research-map">
           <article class="lane">
             <div class="lane-kicker">Track 01 / mechanistic interpretability</div>
@@ -740,7 +817,7 @@
             <div class="eyebrow">Canonical Publications - Papers with DOIs</div>
             <h2>Archived papers, not just lab notes.</h2>
           </div>
-          <p class="section-copy">Twenty-five canonical paper slots in the DuoNeural publication stream, with DOI-backed Zenodo records for the newest behavioral routing, quantum recurrent circuit, and Dynamic Horizon Prediction results.</p>
+          <p class="section-copy">Twenty-six canonical paper slots in the DuoNeural publication stream, with DOI-backed Zenodo records for the newest quantum parity, behavioral routing, quantum recurrent circuit, and Dynamic Horizon Prediction results.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Paper filters">
@@ -752,6 +829,16 @@
         </div>
 
         <div class="papers-grid">
+          <article class="paper-card" data-track="ctm">
+            <div class="paper-main">
+              <div class="paper-meta"><span class="pill lime">Paper 26</span><span class="pill amber">quantum parity</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
+              <h3 class="paper-title">The Quantum Parity Trap</h3>
+              <div class="paper-authors mono">Archon; Aura; Jesse Caldwell / DuoNeural</div>
+              <p class="paper-abstract">Paper 26 shows that a two-qubit parity-detection circuit can beat the classical Dynamical Horizon Principle limit under Pauli depolarizing noise. Isotropic Bloch contraction preserves gradient sign even as coherence collapses; at p=0.74, only 0.018% of coherence survives and 6/6 seeds still converge, yielding a 12x advantage over the classical DHP limit.</p>
+            </div>
+            <div class="paper-foot"><span class="doi">10.5281/zenodo.20451102</span><a href="https://zenodo.org/record/20451102" target="_blank" rel="noreferrer">DOI -></a></div>
+          </article>
+
           <article class="paper-card" data-track="ctm">
             <div class="paper-main">
               <div class="paper-meta"><span class="pill lime">Q-DHP</span><span class="pill amber">quantum recurrence</span><span class="pill">May 2026</span></div>
