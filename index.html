@@ -616,6 +616,7 @@
       <a class="brand" href="#hero"><span class="brand-mark mono">DN</span><span>DuoNeural</span></a>
       <ul class="nav-links">
         <li><a href="#research">Research</a></li>
+        <li><a href="#community">Community</a></li>
         <li><a href="#papers">Papers</a></li>
         <li><a href="#models">Models</a></li>
         <li><a href="#datasets">Datasets</a></li>
@@ -648,7 +649,7 @@
           </div>
           <div class="metric-stack">
             <div class="metric">
-              <span class="metric-value">26</span>
+              <span class="metric-value">29</span>
               <span class="metric-label">canonical papers tracked</span>
             </div>
             <div class="metric">
@@ -673,10 +674,11 @@
 
     <div class="signal-band">
       <div class="wide signal-row">
-        <p><strong>Current signal:</strong> Paper 26 is live on Zenodo: The Quantum Parity Trap shows a two-qubit circuit preserving gradient sign under severe depolarizing noise, beating the classical DHP limit by 12x at p=0.74.</p>
+        <p><strong>Current signal:</strong> Papers 27, 28, and 29 are live on Zenodo, extending the DHP line into quantum recurrent landscape geometry, transformer recurrence evasion, and a thermodynamic capacity derivation.</p>
         <div class="signal-links">
           <a href="updates-archive.html">Updates archive</a>
           <a href="learned.html">What we learned</a>
+          <a href="#community">Community spotlight</a>
           <a href="https://github.com/DuoNeural" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://huggingface.co/DuoNeural" target="_blank" rel="noreferrer">HuggingFace</a>
           <a href="https://zenodo.org/communities/duoneural" target="_blank" rel="noreferrer">Zenodo community</a>
@@ -689,9 +691,47 @@
         <div>
           <div class="eyebrow">Latest from the lab</div>
           <h2>What we have been up to</h2>
-          <p>Latest release: Paper 26 shows that geometry, not scale, lets a two-qubit parity-detection circuit preserve optimizer direction under Pauli depolarizing noise even as coherence collapses.</p>
+          <p>Latest release: three new Zenodo papers bring DuoNeural to 29 research papers since April 2026, with a DHP trilogy covering unital regularization, transformer recurrence evasion, and the thermodynamic capacity limit.</p>
         </div>
         <a class="btn btn-primary" href="updates-archive.html">Open updates archive</a>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Community / News</div>
+            <h2>DreamFast made the benchmark cleaner.</h2>
+          </div>
+          <p class="section-copy">Independent replication is how open research stops fooling itself. A useful correction beats a pretty dashboard every time.</p>
+        </div>
+        <article class="research-feature" aria-labelledby="dreamfast-spotlight">
+          <div>
+            <div class="feature-kicker">Community spotlight / May 2026</div>
+            <h3 id="dreamfast-spotlight"><a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">Thank you, @DreamFast</a></h3>
+            <p>In May 2026, <a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">@DreamFast</a> on Hugging Face published an independent abliteration study that included one of our open models. Their analysis used full-vocabulary first-token logit comparison over benign prompts to measure KL-divergence shifts between base and abliterated outputs.</p>
+            <p>DreamFast measured a KL divergence of about 0.1872 for our abliterated model, compared with a much smaller value that had appeared in our model card from an internal Heretic v1.2.0 relative-comparison pipeline. Both measurements were internally valid for their own assumptions, but DreamFast's method is the better community-facing standard for cross-study transparency.</p>
+            <p>They reached out directly, flagged the discrepancy, and gave us a cleaner external benchmark. We updated the model card and our abliteration benchmarking methodology accordingly. That is exactly the kind of open-science interaction we want DuoNeural to participate in.</p>
+          </div>
+          <aside class="feature-panel" aria-label="DreamFast acknowledgement">
+            <div class="paper-meta"><span class="pill cyan">community</span><span class="pill lime">abliteration</span><span class="pill amber">benchmarking</span></div>
+            <dl>
+              <div>
+                <dt>Credit</dt>
+                <dd><a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">@DreamFast on Hugging Face</a></dd>
+              </div>
+              <div>
+                <dt>What changed</dt>
+                <dd>External KL measurement is now treated as the stronger comparison standard for community-facing abliteration transparency.</dd>
+              </div>
+              <div>
+                <dt>Thanks</dt>
+                <dd>Careful study, gracious outreach, excellent methodology. That is the good stuff.</dd>
+              </div>
+            </dl>
+          </aside>
+        </article>
       </div>
     </section>
 
@@ -704,30 +744,28 @@
           </div>
           <p class="section-copy">The site now leads with the research because that is the asset. Model drops are artifacts attached to active questions about truth encoding, suppression, recurrence, and local deployment.</p>
         </div>
-        <article class="research-feature" aria-labelledby="paper-26-highlight">
+        <article class="research-feature" aria-labelledby="dhp-trilogy-highlight">
           <div>
-            <div class="feature-kicker">Featured research / 2026-05-29</div>
-            <h3 id="paper-26-highlight"><a href="https://zenodo.org/record/20451102" target="_blank" rel="noreferrer">New Paper: The Quantum Parity Trap</a></h3>
-            <p>We just published our 26th paper, and it might be our most surprising result yet. Paper 26 shows that a two-qubit quantum circuit can <em>beat</em> the Dynamical Horizon Principle, the fundamental learning limit we discovered and characterized across 22 previous papers.</p>
-            <p>The trick is not more qubits or error correction. It is geometry. When Pauli depolarizing noise acts on a parity-detection circuit, the Bloch sphere contracts isotropically, so gradient sign is always preserved no matter how strong the noise. We call this the quantum parity trap: a regime where the optimizer receives consistent directional signal even as coherence collapses toward zero.</p>
-            <p>At p=0.74, only 0.018% of quantum coherence survives, and 6 out of 6 training seeds still converge. That is a 12x advantage over the classical DHP limit. As noise approaches its maximum, the advantage diverges toward infinity.</p>
-            <p>Supplementary experiments include real Rigetti QPU hardware runs with 4096 shots, readout error mitigation, and a &gt;50 sigma margin; an optimizer ablation showing gradient direction alone is sufficient, with signSGD matching Adam while vanilla SGD fails; and a T1 amplitude damping sweep showing that T1 noise at any tested strength cannot evict seeds from the partial-parity attractor.</p>
-            <p>DHP holds generically. But for the right task structure, under the right noise, with the right optimizer, quantum interference structure defeats it.</p>
+            <div class="feature-kicker">Featured research / 2026-05-31</div>
+            <h3 id="dhp-trilogy-highlight"><a href="https://doi.org/10.5281/zenodo.20476070" target="_blank" rel="noreferrer">New DHP trilogy: geometry, recurrence, thermodynamics</a></h3>
+            <p>DuoNeural has now published 29 research papers since April 2026. Papers 27, 28, and 29 tighten the DHP arc from three directions: quantum recurrent landscape geometry, transformer routing topology, and a first-principles thermodynamic capacity account.</p>
+            <p>Paper 27 maps why unital noise can regularize quantum recurrent parity landscapes while non-unital damping shifts the Bloch origin and damages the optimization basin. Paper 28 shows DHP is a recurrence constraint, not a generic gradient-descent law: full-attention transformers evade the recurrent decay cliff, while window attention hits a hard visibility boundary. Paper 29 derives the familiar 0.72-0.75 ceiling from a 1-nat thermodynamic operating point, yielding e/(e+1) = 0.731.</p>
+            <p>The short version: DHP is not going away. It is becoming more precisely bounded.</p>
           </div>
-          <aside class="feature-panel" aria-label="Paper 26 details">
-            <div class="paper-meta"><span class="pill lime">Paper 26</span><span class="pill amber">quantum parity</span><span class="pill cyan">DHP</span></div>
+          <aside class="feature-panel" aria-label="Papers 27 through 29 details">
+            <div class="paper-meta"><span class="pill lime">Papers 27-29</span><span class="pill amber">DHP trilogy</span><span class="pill cyan">Zenodo</span></div>
             <dl>
               <div>
-                <dt>DOI</dt>
-                <dd><a href="https://zenodo.org/record/20451102" target="_blank" rel="noreferrer">10.5281/zenodo.20451102</a></dd>
+                <dt>Paper 27</dt>
+                <dd><a href="https://doi.org/10.5281/zenodo.20476064" target="_blank" rel="noreferrer">10.5281/zenodo.20476064</a></dd>
               </div>
               <div>
-                <dt>Authors</dt>
-                <dd>Archon; Aura; Jesse Caldwell / DuoNeural</dd>
+                <dt>Paper 28</dt>
+                <dd><a href="https://doi.org/10.5281/zenodo.20476068" target="_blank" rel="noreferrer">10.5281/zenodo.20476068</a></dd>
               </div>
               <div>
-                <dt>Core result</dt>
-                <dd>Gradient sign survives isotropic Bloch contraction under Pauli depolarizing noise.</dd>
+                <dt>Paper 29</dt>
+                <dd><a href="https://doi.org/10.5281/zenodo.20476070" target="_blank" rel="noreferrer">10.5281/zenodo.20476070</a></dd>
               </div>
             </dl>
           </aside>
@@ -817,7 +855,7 @@
             <div class="eyebrow">Canonical Publications - Papers with DOIs</div>
             <h2>Archived papers, not just lab notes.</h2>
           </div>
-          <p class="section-copy">Twenty-six canonical paper slots in the DuoNeural publication stream, with DOI-backed Zenodo records for the newest quantum parity, behavioral routing, quantum recurrent circuit, and Dynamic Horizon Prediction results.</p>
+          <p class="section-copy">Twenty-nine canonical paper slots in the DuoNeural publication stream, with DOI-backed Zenodo records for the newest DHP trilogy, quantum recurrent landscape, behavioral routing, and recurrent cognition results.</p>
         </div>
 
         <div class="filter-bar" role="group" aria-label="Paper filters">
@@ -829,6 +867,36 @@
         </div>
 
         <div class="papers-grid">
+          <article class="paper-card" data-track="ctm">
+            <div class="paper-main">
+              <div class="paper-meta"><span class="pill lime">Paper 29</span><span class="pill amber">thermodynamics</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
+              <h3 class="paper-title">The Thermodynamic Capacity Limit of Sequence Learning: A Universal Derivation of the Dynamical Horizon Principle</h3>
+              <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
+              <p class="paper-abstract">Paper 29 proposes a thermodynamic model for the DHP ceiling, deriving the 0.72-0.75 empirical boundary from a 1-nat operating point where the Boltzmann ground-state occupancy pins at e/(e+1) = 0.731 across Markovian classical and quantum sequence systems.</p>
+            </div>
+            <div class="paper-foot"><span class="doi">10.5281/zenodo.20476070</span><a href="https://doi.org/10.5281/zenodo.20476070" target="_blank" rel="noreferrer">DOI -></a></div>
+          </article>
+
+          <article class="paper-card" data-track="ctm">
+            <div class="paper-main">
+              <div class="paper-meta"><span class="pill lime">Paper 28</span><span class="pill amber">transformers</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
+              <h3 class="paper-title">DHP is a Recurrence Constraint: Full-Attention Transformers Evade the Dynamical Horizon Principle</h3>
+              <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
+              <p class="paper-abstract">Paper 28 shows that DHP is a recurrence constraint rather than a universal property of gradient descent. LSTMs hit an exponential training cliff, full-attention transformers stay flat through tested sequence lengths, and window attention replaces decay with a hard receptive-field visibility boundary.</p>
+            </div>
+            <div class="paper-foot"><span class="doi">10.5281/zenodo.20476068</span><a href="https://doi.org/10.5281/zenodo.20476068" target="_blank" rel="noreferrer">DOI -></a></div>
+          </article>
+
+          <article class="paper-card" data-track="ctm">
+            <div class="paper-main">
+              <div class="paper-meta"><span class="pill lime">Paper 27</span><span class="pill amber">quantum recurrence</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
+              <h3 class="paper-title">The Geometry of Quantum Recurrent Landscapes: Unital Regularization and Optimizer Invariance</h3>
+              <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
+              <p class="paper-abstract">Paper 27 maps the boundary between regularizing and non-regularizing open-system noise in two-qubit Q-RNN parity tasks. Unital channels preserve parity landscape symmetry and restore convergence, while non-unital drift disrupts the basin; normalized direction-preserving optimizers remain robust under unital noise.</p>
+            </div>
+            <div class="paper-foot"><span class="doi">10.5281/zenodo.20476064</span><a href="https://doi.org/10.5281/zenodo.20476064" target="_blank" rel="noreferrer">DOI -></a></div>
+          </article>
+
           <article class="paper-card" data-track="ctm">
             <div class="paper-main">
               <div class="paper-meta"><span class="pill lime">Paper 26</span><span class="pill amber">quantum parity</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
@@ -1240,7 +1308,7 @@
           <p class="section-copy">Independent lab. Measurable output. These are the numbers — published papers, open models, and datasets you can actually run.</p>
         </div>
         <div class="proof-grid">
-          <div class="note-card"><strong>25</strong><span>canonical paper slots tracked, with DOI-backed Zenodo records linked for the active publication stream.</span></div>
+          <div class="note-card"><strong>29</strong><span>research papers published since April 2026, with DOI-backed Zenodo records linked for the active publication stream.</span></div>
           <div class="note-card"><strong>69</strong><span>Models and checkpoints on HuggingFace.</span></div>
           <div class="note-card"><strong>6</strong><span>public datasets surfaced under the DuoNeural HuggingFace org.</span></div>
           <div class="note-card"><strong>1</strong><span>Zenodo community tying the publication stream together.</span></div>
