@@ -710,7 +710,7 @@
           <div>
             <div class="feature-kicker">Community spotlight / May 2026</div>
             <h3 id="dreamfast-spotlight"><a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">Thank you, @DreamFast</a></h3>
-            <p>In May 2026, <a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">@DreamFast</a> on Hugging Face published an independent abliteration study that included one of our open models. Their analysis used full-vocabulary first-token logit comparison over benign prompts to measure KL-divergence shifts between base and abliterated outputs.</p>
+            <p>In May 2026, <a href="https://huggingface.co/dreamfast" target="_blank" rel="noreferrer">@DreamFast</a> on Hugging Face published an independent abliteration study — <a href="https://huggingface.co/DreamFast/Gemma4-e2b-abliterlitics" target="_blank" rel="noreferrer">Gemma4-e2b-Abliterlitics</a> — that included one of our open models. Their analysis used full-vocabulary first-token logit comparison over benign prompts to measure KL-divergence shifts between base and abliterated outputs.</p>
             <p>DreamFast measured a KL divergence of about 0.1872 for our abliterated model, compared with a much smaller value that had appeared in our model card from an internal Heretic v1.2.0 relative-comparison pipeline. Both measurements were internally valid for their own assumptions, but DreamFast's method is the better community-facing standard for cross-study transparency.</p>
             <p>They reached out directly, flagged the discrepancy, and gave us a cleaner external benchmark. We updated the model card and our abliteration benchmarking methodology accordingly. That is exactly the kind of open-science interaction we want DuoNeural to participate in.</p>
           </div>
@@ -747,10 +747,10 @@
         <article class="research-feature" aria-labelledby="dhp-trilogy-highlight">
           <div>
             <div class="feature-kicker">Featured research / 2026-05-31</div>
-            <h3 id="dhp-trilogy-highlight"><a href="https://doi.org/10.5281/zenodo.20476070" target="_blank" rel="noreferrer">New DHP trilogy: geometry, recurrence, thermodynamics</a></h3>
-            <p>DuoNeural has now published 29 research papers since April 2026. Papers 27, 28, and 29 tighten the DHP arc from three directions: quantum recurrent landscape geometry, transformer routing topology, and a first-principles thermodynamic capacity account.</p>
-            <p>Paper 27 maps why unital noise can regularize quantum recurrent parity landscapes while non-unital damping shifts the Bloch origin and damages the optimization basin. Paper 28 shows DHP is a recurrence constraint, not a generic gradient-descent law: full-attention transformers evade the recurrent decay cliff, while window attention hits a hard visibility boundary. Paper 29 derives the familiar 0.72-0.75 ceiling from a 1-nat thermodynamic operating point, yielding e/(e+1) = 0.731.</p>
-            <p>The short version: DHP is not going away. It is becoming more precisely bounded.</p>
+            <h3 id="dhp-trilogy-highlight"><a href="https://doi.org/10.5281/zenodo.20476064" target="_blank" rel="noreferrer">DHP trilogy: geometry, recurrence, thermodynamics</a></h3>
+            <p>DuoNeural has published 29 research papers since April 2026. Papers 27, 28, and 29 tighten the DHP arc from three directions: quantum recurrent landscape geometry, transformer routing topology, and a thermodynamic capacity framework.</p>
+            <p>Paper 27 (v3) maps why unital noise regularizes quantum parity landscapes while non-unital damping disrupts them — and validates this on IBM ibm_kingston hardware, where native T₂ dephasing demonstrates the unital protection mechanism in practice. Paper 28 shows DHP is a recurrence constraint, not a generic gradient law: full-attention transformers evade the recurrent cliff (spatial analog experiment in progress). Paper 29 (v2) develops a thermodynamic framework consistent with the 0.731 empirical ceiling; the formal 1-nat causal mapping is an open derivation problem detailed in the revision.</p>
+            <p>The short version: DHP is not going away. It is becoming more precisely bounded — and honestly reported.</p>
           </div>
           <aside class="feature-panel" aria-label="Papers 27 through 29 details">
             <div class="paper-meta"><span class="pill lime">Papers 27-29</span><span class="pill amber">DHP trilogy</span><span class="pill cyan">Zenodo</span></div>
@@ -870,9 +870,9 @@
           <article class="paper-card" data-track="ctm">
             <div class="paper-main">
               <div class="paper-meta"><span class="pill lime">Paper 29</span><span class="pill amber">thermodynamics</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
-              <h3 class="paper-title">The Thermodynamic Capacity Limit of Sequence Learning: A Universal Derivation of the Dynamical Horizon Principle</h3>
+              <h3 class="paper-title">Thermodynamic Signatures of the Dynamical Horizon Principle: Empirical Consistency with a 1-Nat Capacity Boundary in Sequence Learning</h3>
               <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
-              <p class="paper-abstract">Paper 29 proposes a thermodynamic model for the DHP ceiling, deriving the 0.72-0.75 empirical boundary from a 1-nat operating point where the Boltzmann ground-state occupancy pins at e/(e+1) = 0.731 across Markovian classical and quantum sequence systems.</p>
+              <p class="paper-abstract">Paper 29 (v2) develops a thermodynamic framework for the DHP ceiling: modeling sequence learning as a CPTP Markovian channel yields a 1-nat operating point where Boltzmann ground-state occupancy is e/(e+1) ≈ 0.731 — numerically consistent with the observed empirical ceiling. Experimental results (τ*/τ_L = 0.753 ± 0.118 at optimal settings) are consistent with the prediction. The formal mapping from optimizer dynamics to channel thermodynamic variables is an open derivation problem; v2 narrows scope from "universal derivation" to "empirical consistency."</p>
             </div>
             <div class="paper-foot"><span class="doi">10.5281/zenodo.20476070</span><a href="https://doi.org/10.5281/zenodo.20476070" target="_blank" rel="noreferrer">DOI -></a></div>
           </article>
@@ -882,7 +882,7 @@
               <div class="paper-meta"><span class="pill lime">Paper 28</span><span class="pill amber">transformers</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
               <h3 class="paper-title">DHP is a Recurrence Constraint: Full-Attention Transformers Evade the Dynamical Horizon Principle</h3>
               <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
-              <p class="paper-abstract">Paper 28 shows that DHP is a recurrence constraint rather than a universal property of gradient descent. LSTMs hit an exponential training cliff, full-attention transformers stay flat through tested sequence lengths, and window attention replaces decay with a hard receptive-field visibility boundary.</p>
+              <p class="paper-abstract">Paper 28 shows that DHP is a recurrence constraint, not a universal property of gradient descent. LSTMs hit an exponential training cliff at T/τ ≈ 0.72; full-attention transformers stay flat through all tested lengths; window attention hits a hard receptive-field visibility boundary. A spatial analog experiment is in progress to characterize the geometric capacity limit of transformer residual stream rotation — the threshold beyond which full-attention DHP-evasion itself fails.</p>
             </div>
             <div class="paper-foot"><span class="doi">10.5281/zenodo.20476068</span><a href="https://doi.org/10.5281/zenodo.20476068" target="_blank" rel="noreferrer">DOI -></a></div>
           </article>
@@ -892,7 +892,7 @@
               <div class="paper-meta"><span class="pill lime">Paper 27</span><span class="pill amber">quantum recurrence</span><span class="pill cyan">DHP</span><span class="pill">May 2026</span></div>
               <h3 class="paper-title">The Geometry of Quantum Recurrent Landscapes: Unital Regularization and Optimizer Invariance</h3>
               <div class="paper-authors mono">Archon; Jesse Caldwell; Aura / DuoNeural</div>
-              <p class="paper-abstract">Paper 27 maps the boundary between regularizing and non-regularizing open-system noise in two-qubit Q-RNN parity tasks. Unital channels preserve parity landscape symmetry and restore convergence, while non-unital drift disrupts the basin; normalized direction-preserving optimizers remain robust under unital noise.</p>
+              <p class="paper-abstract">Paper 27 (v3) maps the boundary between regularizing and non-regularizing open-system noise in two-qubit Q-RNN parity tasks. Unital channels preserve parity landscape symmetry and restore convergence; non-unital drift disrupts the basin. Five QPU experiments on IBM ibm_kingston demonstrate natural T₂ unital regularization in practice — the hardware's T₂ dephasing protects the gradient landscape before T₁ asymmetry can accumulate, physically confirming the theoretical mechanism. Normalized optimizers (Adam, Muon, signSGD) remain robust under unital noise; unnormalized methods (SGD, Heavy Ball) fail.</p>
             </div>
             <div class="paper-foot"><span class="doi">10.5281/zenodo.20476064</span><a href="https://doi.org/10.5281/zenodo.20476064" target="_blank" rel="noreferrer">DOI -></a></div>
           </article>
