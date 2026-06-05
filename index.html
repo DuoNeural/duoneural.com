@@ -206,6 +206,20 @@
     }
     .btn-primary:hover { color: var(--bg); background: #6CFF55; }
 
+    .milestone-callout {
+      display: block;
+      max-width: 760px;
+      margin-top: 22px;
+      padding: 15px 16px;
+      border: 1px solid rgba(57,255,20,0.42);
+      border-radius: var(--radius);
+      background: rgba(57,255,20,0.055);
+      color: var(--text);
+    }
+    .milestone-callout strong { color: var(--lime); }
+    .milestone-callout span { color: var(--muted); }
+    .milestone-callout:hover { border-color: var(--lime); background: rgba(57,255,20,0.08); }
+
     .status-panel {
       border: 1px solid rgba(0,201,255,0.28);
       border-radius: var(--radius);
@@ -460,6 +474,10 @@
       min-height: 190px;
       padding: 18px;
     }
+    .artifact-card.featured {
+      border-color: rgba(57,255,20,0.55);
+      background: linear-gradient(135deg, rgba(57,255,20,0.075), rgba(0,201,255,0.055)), rgba(17,17,26,0.9);
+    }
     .artifact-card:hover, .dataset-card:hover, .edge-card:hover, .team-card:hover, .paper-card:hover { border-color: rgba(0,201,255,0.5); }
     .artifact-card h3, .dataset-card h3, .edge-card h3, .team-card h3 { text-transform: none; letter-spacing: 0; }
 
@@ -641,6 +659,10 @@
             <a class="btn" href="https://huggingface.co/DuoNeural" target="_blank" rel="noreferrer">HuggingFace org</a>
             <a class="btn" href="https://zenodo.org/communities/duoneural" target="_blank" rel="noreferrer">Zenodo community</a>
           </div>
+          <a class="milestone-callout" href="https://huggingface.co/DuoNeural/Gemma4-12B-IT-Abliterated" target="_blank" rel="noreferrer">
+            <strong>Gemma 4-12B-IT Abliterated:</strong>
+            <span>10,000+ downloads in 24 hours - most downloaded Gemma 4 abliteration on HuggingFace.</span>
+          </a>
         </div>
         <aside class="status-panel" aria-label="DuoNeural status snapshot">
           <div class="status-top">
@@ -661,7 +683,7 @@
               <span class="metric-label">open datasets surfaced on HF</span>
             </div>
             <div class="metric">
-              <span class="metric-value">38K+</span>
+              <span class="metric-value">40K+</span>
               <span class="metric-label">visible HF model downloads snapshot</span>
             </div>
           </div>
@@ -674,7 +696,7 @@
 
     <div class="signal-band">
       <div class="wide signal-row">
-        <p><strong>Current signal:</strong> Papers 27, 28, and 29 are live on Zenodo, extending the DHP line into quantum recurrent landscape geometry, transformer recurrence evasion, and a thermodynamic capacity derivation.</p>
+        <p><strong>Current signal:</strong> Gemma 4-12B-IT Abliterated crossed 10,000+ downloads in 24 hours, while June research isolates CoT dissociation, mid-network Phi-4 crystallization, cone geometry, and multi-architecture abliteration behavior.</p>
         <div class="signal-links">
           <a href="updates-archive.html">Updates archive</a>
           <a href="learned.html">What we learned</a>
@@ -691,7 +713,7 @@
         <div>
           <div class="eyebrow">Latest from the lab</div>
           <h2>What we have been up to</h2>
-          <p>Latest release: three new Zenodo papers bring DuoNeural to 29 research papers since April 2026, with a DHP trilogy covering unital regularization, transformer recurrence evasion, and the thermodynamic capacity limit.</p>
+          <p>Latest release wave: Gemma 4-12B-IT Abliterated became the most downloaded Gemma 4 abliteration on HuggingFace in its first day, and the June research stream now covers CoT dissociation, concept cone geometry, topological hardness, and multi-model abliteration results.</p>
         </div>
         <a class="btn btn-primary" href="updates-archive.html">Open updates archive</a>
       </div>
@@ -1162,13 +1184,13 @@
 
         <div class="artifact-layout">
           <div class="artifact-feature">
-            <div class="eyebrow">Top public repos by visible downloads</div>
-            <h3>From abliterated Gemma quants to CTM research checkpoints.</h3>
-            <p>Some releases are practical local-inference drops; some are controlled research artifacts; some are dataset-linked SFT experiments. The page shows the spread instead of dumping everything in one pile.</p>
+            <div class="eyebrow">Top Models</div>
+            <h3>Gemma abliteration is carrying the download board.</h3>
+            <p>Top public model repos sorted by visible HuggingFace downloads. The 12B Gemma release is featured after crossing 10,000+ downloads in 24 hours.</p>
             <div class="download-line">
-              <div class="download-tile"><strong>5,815</strong><span>Gemma-4-E2B-Abliterated-GGUF</span></div>
-              <div class="download-tile"><strong>3,684</strong><span>Qwen3.6-35B-A3B-Code-imatrix-GGUF</span></div>
-              <div class="download-tile"><strong>2,739</strong><span>Gemma-4-E2B-Heretic-GGUF</span></div>
+              <div class="download-tile"><strong>19.7K</strong><span>Gemma-4-26B-A4B-Abliterated-GGUF</span></div>
+              <div class="download-tile"><strong>10.1K</strong><span>Gemma4-12B-IT-Abliterated-GGUF</span></div>
+              <div class="download-tile"><strong>3.36K</strong><span>Phi-4-mini-instruct-GGUF</span></div>
             </div>
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://huggingface.co/DuoNeural" target="_blank" rel="noreferrer">Open HuggingFace org</a>
@@ -1177,35 +1199,40 @@
           </div>
 
           <div class="artifact-grid">
-            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Gemma-4-E2B-Abliterated-GGUF" target="_blank" rel="noreferrer">
-              <h3>Gemma-4-E2B-Abliterated-GGUF</h3>
-              <p>Top downloaded GGUF release in the public API snapshot. Compact, local, and aligned with the lab's abliteration research thread.</p>
-              <div class="artifact-meta"><span class="pill lime">5.8K downloads</span><span class="pill cyan">GGUF</span></div>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Gemma-4-26B-A4B-Abliterated-GGUF" target="_blank" rel="noreferrer">
+              <h3>Gemma-4-26B-A4B-Abliterated-GGUF</h3>
+              <p>Top visible-download model in the current DuoNeural HuggingFace snapshot.</p>
+              <div class="artifact-meta"><span class="pill lime">19.7K downloads</span><span class="pill cyan">GGUF</span></div>
+            </a>
+            <a class="artifact-card featured" href="https://huggingface.co/DuoNeural/Gemma4-12B-IT-Abliterated-GGUF" target="_blank" rel="noreferrer">
+              <h3>Gemma4-12B-IT-Abliterated-GGUF</h3>
+              <p>Featured release: 10,000+ downloads in 24 hours and the most downloaded Gemma 4 abliteration on HuggingFace.</p>
+              <div class="artifact-meta"><span class="pill lime">10.1K downloads</span><span class="pill amber">10 likes</span><span class="pill cyan">featured</span></div>
+            </a>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Phi-4-mini-instruct-GGUF" target="_blank" rel="noreferrer">
+              <h3>Phi-4-mini-instruct-GGUF</h3>
+              <p>Compact Phi release for local inference and crystallization comparison work.</p>
+              <div class="artifact-meta"><span class="pill lime">3.36K downloads</span><span class="pill cyan">GGUF</span></div>
+            </a>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/OpenYourMind-Gemma4-12B-IT-Abliterated-GGUF" target="_blank" rel="noreferrer">
+              <h3>OpenYourMind-Gemma4-12B-IT-Abliterated-GGUF</h3>
+              <p>12B Gemma abliteration variant with steady public pickup.</p>
+              <div class="artifact-meta"><span class="pill lime">2.24K downloads</span><span class="pill amber">5 likes</span></div>
+            </a>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Gemma-4-E4B-Claude-Abliterated-GGUF" target="_blank" rel="noreferrer">
+              <h3>Gemma-4-E4B-Claude-Abliterated-GGUF</h3>
+              <p>Claude-guided E4B Gemma abliteration quant in the active research release family.</p>
+              <div class="artifact-meta"><span class="pill lime">1.69K downloads</span><span class="pill amber">8 likes</span></div>
             </a>
             <a class="artifact-card" href="https://huggingface.co/DuoNeural/Qwen3.6-35B-A3B-Code-imatrix-GGUF" target="_blank" rel="noreferrer">
               <h3>Qwen3.6-35B-A3B-Code-imatrix-GGUF</h3>
-              <p>MoE code model quantized for practical inference. Big-model-in-small-runtime work, minus the bloat parade.</p>
-              <div class="artifact-meta"><span class="pill lime">3.7K downloads</span><span class="pill violet">MoE</span></div>
+              <p>MoE code model quantized for practical inference.</p>
+              <div class="artifact-meta"><span class="pill lime">1.62K downloads</span><span class="pill amber">8 likes</span><span class="pill violet">MoE</span></div>
             </a>
-            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Archon-8B" target="_blank" rel="noreferrer">
-              <h3>Archon-8B / 14B / R1-32B</h3>
-              <p>Abliterated model family spanning everyday 8B, larger 14B, and DeepSeek-R1-Distill-Qwen-32B derived reasoning work.</p>
-              <div class="artifact-meta"><span class="pill cyan">abliteration</span><span class="pill">Qwen</span></div>
-            </a>
-            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Nano-CTM-Phase2" target="_blank" rel="noreferrer">
-              <h3>Nano-CTM Phase 2</h3>
-              <p>Continuous Thought Machine research artifact with recurrent thought loops and TSSP-linked experimental context.</p>
-              <div class="artifact-meta"><span class="pill violet">research</span><span class="pill lime">CTM</span></div>
-            </a>
-            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Qwen2.5-Coder-3B-SFT-StructuredOutput" target="_blank" rel="noreferrer">
-              <h3>Structured-output SFT family</h3>
-              <p>JSON, SQL, WebCode, and combined SFT runs tying datasets directly to model behavior shifts.</p>
-              <div class="artifact-meta"><span class="pill violet">SFT</span><span class="pill amber">structured output</span></div>
-            </a>
-            <a class="artifact-card" href="https://huggingface.co/DuoNeural/CTM-Dynamical-Horizon" target="_blank" rel="noreferrer">
-              <h3>CTM-Dynamical-Horizon</h3>
-              <p>Research artifact for the dynamical systems line: chaos theory, Lyapunov horizons, and temporal integration.</p>
-              <div class="artifact-meta"><span class="pill lime">DHP</span><span class="pill">artifact</span></div>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Gemma-4-E4B-Abliterated-GGUF" target="_blank" rel="noreferrer">
+              <h3>Gemma-4-E4B-Abliterated-GGUF</h3>
+              <p>E4B Gemma abliteration quant rounding out the visible top-model set.</p>
+              <div class="artifact-meta"><span class="pill lime">1.48K downloads</span><span class="pill amber">8 likes</span></div>
             </a>
           </div>
         </div>
@@ -1310,7 +1337,7 @@
         <div class="proof-grid">
           <div class="note-card"><strong>29</strong><span>research papers published since April 2026, with DOI-backed Zenodo records linked for the active publication stream.</span></div>
           <div class="note-card"><strong>69</strong><span>Models and checkpoints on HuggingFace.</span></div>
-          <div class="note-card"><strong>6</strong><span>public datasets surfaced under the DuoNeural HuggingFace org.</span></div>
+          <div class="note-card"><strong>10K+</strong><span>Gemma 4-12B-IT Abliterated downloads in 24 hours.</span></div>
           <div class="note-card"><strong>1</strong><span>Zenodo community tying the publication stream together.</span></div>
         </div>
       </div>
