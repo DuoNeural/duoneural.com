@@ -714,7 +714,7 @@
         <div>
           <div class="eyebrow">Latest from the lab</div>
           <h2>What we have been up to</h2>
-          <p>Oct 14: Bismuth-104M public on HuggingFace + GitHub. Paper 41 (IBM Heron r2 QPU topology) submitted to Zenodo. Crystal Telepathy N=3 Stage-3 topological barrier formally proven. 204 model repos, 54K+ monthly downloads, 37+ papers.</p>
+          <p>Oct 21: Lattice-CDM series active — Lattice-3-Synapse (107M, PPL 6.93 @85k/100k), Lattice-4A (215M, PPL 11.87 @26k/100k, Josephson Junction lock confirmed), Sub-Lattice v3 (17M, PPL 17.65 @46k/100k), and Lattice-5-Prometheus (406M, Qwen3.6-27B teacher) launching now. Lattice-1 and Sub-Lattice-17M released on HuggingFace. Full series + scripts on <a href="https://github.com/DuoNeural/Lattice-CDM" target="_blank" rel="noreferrer">GitHub</a>. Oct 14: Bismuth-104M public. Paper 41 (IBM Heron r2 QPU) submitted to Zenodo. Crystal Telepathy Triadic Phase Barrier confirmed. 204+ model repos, 54K+ monthly downloads, 38+ papers.</p>
         </div>
         <a class="btn btn-primary" href="updates-archive.html">Open updates archive</a>
       </div>
@@ -1296,6 +1296,16 @@
               <p>First base autoregressive LM with learnable hyperbolic CDM curvature. CrystalFormer v4 architecture. Released Oct 14, 2026.</p>
               <div class="artifact-meta"><span class="pill lime">original architecture</span><span class="pill cyan">104M params</span><span class="pill amber">NEW</span></div>
             </a>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Lattice-1-107M-Poincare-Preview" target="_blank" rel="noreferrer">
+              <h3>Lattice-1-107M-Poincaré-Preview</h3>
+              <p>First CDM Lattice series release — 107M params, Poincaré MoE LM with learnable hyperbolic curvature, K=8 EMA slot centroids, Crystal Telepathy, and DHP-LR coupling.</p>
+              <div class="artifact-meta"><span class="pill lime">CDM Lattice</span><span class="pill cyan">107M params</span><span class="pill violet">Poincaré MoE</span></div>
+            </a>
+            <a class="artifact-card" href="https://huggingface.co/DuoNeural/Sub-Lattice-17M-Poincare-Instruct" target="_blank" rel="noreferrer">
+              <h3>Sub-Lattice-17M-Poincaré-Instruct</h3>
+              <p>Ultra-compact 17M param CDM model with Crystal Telepathy and DHP. Instruct-tuned. Smallest hyperbolic Poincaré MoE language model we have published.</p>
+              <div class="artifact-meta"><span class="pill lime">CDM Sub-Lattice</span><span class="pill cyan">17M params</span><span class="pill amber">instruct</span></div>
+            </a>
             <a class="artifact-card" href="https://huggingface.co/DuoNeural/Gemma4-12B-IT-Abliterated-GGUF" target="_blank" rel="noreferrer">
               <h3>Gemma4-12B-IT-Abliterated-GGUF</h3>
               <p>Top DuoNeural model by monthly downloads — 3,100+ downloads/month.</p>
@@ -1385,6 +1395,25 @@
             <p>104M-parameter hybrid transformer-recurrent LM with learnable hyperbolic CDM curvature. Chinchilla-optimal pretraining on 2.555B FineWeb-Edu tokens. PPL 24.70. Released Oct 14, 2026.</p>
             <div class="artifact-meta"><span class="pill lime">released Oct 14</span><span class="pill cyan">104M params</span><span class="pill amber">hyperbolic CDM</span></div>
           </a>
+          <a class="edge-card" href="https://huggingface.co/DuoNeural/Lattice-1-107M-Poincare-Preview" target="_blank" rel="noreferrer">
+            <h3>Lattice-1-107M — CDM Poincaré Preview</h3>
+            <p>107M Poincaré MoE LM distilled from SmolLM2-1.7B. K=8 EMA slot centroids, per-layer learnable curvature, Crystal Telepathy inter-layer routing, DHP-LR coupling.</p>
+            <div class="artifact-meta"><span class="pill lime">Lattice series</span><span class="pill cyan">107M params</span><span class="pill violet">Poincaré MoE</span></div>
+          </a>
+          <a class="edge-card" href="https://huggingface.co/DuoNeural/Sub-Lattice-17M-Poincare-Instruct" target="_blank" rel="noreferrer">
+            <h3>Sub-Lattice-17M — CDM Instruct</h3>
+            <p>17M param compact CDM model. 3 layers, d=256, K=8. Crystal Telepathy, DHP. Instruct-tuned. Smallest hyperbolic Poincaré MoE LM we have published.</p>
+            <div class="artifact-meta"><span class="pill lime">Sub-Lattice</span><span class="pill cyan">17M params</span><span class="pill amber">instruct</span></div>
+          </a>
+          <div class="edge-card" style="border-color: rgba(0,201,255,0.35); background: rgba(0,201,255,0.04);">
+            <h3 style="color: var(--cyan);">Lattice Series — Active Training</h3>
+            <p>Lattice-3-Synapse (107M, PPL&nbsp;6.93&nbsp;@85k), Lattice-4A (215M, PPL&nbsp;11.87&nbsp;@26k, Josephson Junction locked), Sub-Lattice&nbsp;v3 (17M, PPL&nbsp;17.65&nbsp;@46k), and Lattice-5-Prometheus (406M, Qwen3.6-27B teacher) launching now on a 32GB node. New models drop to HuggingFace on completion.</p>
+            <div class="artifact-meta"><span class="pill cyan">in training</span><span class="pill lime">Oct 2026</span></div>
+            <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a class="btn" href="https://github.com/DuoNeural/Lattice-CDM" target="_blank" rel="noreferrer" style="font-size:0.82rem; padding:6px 14px;">GitHub: Lattice-CDM</a>
+              <a class="btn" href="https://huggingface.co/DuoNeural" target="_blank" rel="noreferrer" style="font-size:0.82rem; padding:6px 14px;">HuggingFace org</a>
+            </div>
+          </div>
           <a class="edge-card" href="https://huggingface.co/DuoNeural/TurboGemma-E2B" target="_blank" rel="noreferrer">
             <h3>TurboGemma-E2B</h3>
             <p>Gemma 4 1B abliterated, LiteRT format. 2.56 GB.</p>
